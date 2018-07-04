@@ -1,0 +1,250 @@
+---
+title:  Ci??ncia de Dados para Todos (Data Science
+  For All) - 2018.1 - An??lise da Produ????o Cient??fica e Acad??mica da Universidade de Bras??lia - Relat??rio Final da Disciplina - ??reas Geografia, Geoci??ncias Aplicadas e Geodin??mica e Geologia
+authors: "Diogo, Ricardo e Luis Gustavo Avelino de Lima Jacinto"
+date: "02/07/2018"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introdu????o
+
+
+
+#Metodologia
+
+## Delimita????es iniciais
+
+###Dom??nio de Aplica????o do projeto
+
+
+<!--registrada na [base de curr??culos Lattes](lattes.cnpq.br), do CNPq.-->
+
+###Tipo de Problema abordado
+
+
+
+###Conjunto de Ferramentas e T??cnicas
+
+
+##Modelo de Refer??ncia CRISP-DM
+
+
+###Por que usar o CRISP-DM?
+
+
+### Organiza????o hier??rquica de atividades em fases
+
+
+### Seis Fases do CRISP-DM
+
+
+# CRISP-DM Fase 1 - Entendimento do Neg??cio
+
+##O que ?? o Sistema Nacional de P??s-Gradua????o? (Contextualiza????o)
+
+
+
+###Os Col??gios, Grandes ??reas e ??reas da P??s-Gradua????o Brasileira
+
+
+####Col??gio de Ci??ncias da vida
+
+CI??NCIAS AGR??RIAS| CI??NCIAS BIOL??GICAS| CI??NCIAS DA SA??DE
+-|-|-
+Ci??ncia de Alimentos |Biodiversidade |Educa????o F??sica
+Ci??ncias Agr??rias I |Ci??ncias Biol??gicas I |Enfermagem
+Medicina Veterin??ria |Ci??ncias Biol??gicas II |Farm??cia
+Zootecnia / Recursos Pesqueiros |Ci??ncias Biol??gicas III |Medicina I
+- |- |Medicina II
+- |- |Medicina III
+- |- |Nutri????o
+- |- |Odontologia
+- |- |Sa??de Coletiva
+
+
+####Col??gio de Ci??ncias Exatas, Tecnol??gicas e Multidisciplinar
+
+CI??NCIAS EXATAS E DA TERRA|ENGENHARIAS|MULTIDISCIPLINAR
+-|-|-
+Astronomia / F??sica |Engenharias I |Biotecnologia
+Ci??ncia da Computa????o |Engenharias II |Ci??ncias Ambientais
+Geoci??ncias |Engenharias III |Ensino
+Matem??tica / Probabilidade e Estat??stica |Engenharias IV |Interdisciplinar
+Qu??mica | - |Materiais
+
+
+####Col??gio de Humanidades
+
+
+CI??NCIAS HUMANAS | CI??NCIAS SOCIAIS APLICADAS | LINGU??STICA, LETRAS E ARTES
+-|-|-
+Antropol/Arqueol | Admin.P??b./Empr.,C.Cont??b. e Tur.|Artes
+Ci??ncia Pol. e Rel. Int. |Arquit., Urban. e Design | Lingu??stica e Literatura
+Ci??ncias da Religi??o e Teol. |Comunica????o e Informa????o|-
+Educa????o |Direito|-
+Filosofia |Economia|-
+Geografia |Planej. Urbano e Reg. / Demografia|-
+Hist??ria |Servi??o Social |-
+Psicologia|-|-
+Sociologia|-|-
+
+
+##A UnB dentro do Sistema Nacional de P??s-Gradua????o (Contextualiza????o)
+
+### O que ?? a UnB?
+
+###Descri????o das p??s-gradua????es da UnB
+
+
+###Outros aspectos que caracterizam a produ????o cient??fica e acad??mica da UnB
+
+
+## O que a Organiza????o precisa realmente alcan??ar?
+
+
+##Avalia????o das Circunst??ncias
+
+
+###Avalia????o preliminar das p??s-gradua????es na UnB
+
+
+###Avalia????o preliminar da produ????o cient??fica e acad??mica da UnB
+
+
+#CRISP-DM Fase 2 - Entendimento dos Dados
+
+
+##CRISP-DM Fase.Atividade 2.1 - Coleta inicial dos dados
+
+###Perfil profissional dos docentes vinculados ??s p??s-gradua????es
+
+
+###Orienta????es de mestrado e doutorado realizadas pelos docentes vinculados ??s p??s-gradua????es
+
+
+
+###Produ????o bibliogr??fica gerada pelos docentes vinculados ??s p??s-gradua????es
+
+
+###Agrupamento dos docentes conforme ??reas de atua????o
+
+###Redes de colabora????o entre docentes
+
+
+##CRISP-DM Fase.Atividade 2.2 - Descri????o dos Dados
+
+Para leitura e manipula????o dos dados utilizados, ser??o utilizadas primordialmente as cinco bibliotecas a seguirs 
+
+```{r library-load}
+library(jsonlite)
+library(listviewer)
+library(readxl)
+library(ggplot2)
+library(tidyverse)
+```
+
+
+###Descri????o dos dados do perfil
+
+
+####Potencial de utiliza????o dos dados do perfil dos docentes
+
+
+
+
+###Descri????o dos dados de orienta????es
+
+
+###Descri????o dos dados de produ????o bibliogr??fica
+
+
+###Descri????o dos dados de agrega????o de docentes por ??rea
+
+
+###Descri????o dos dados de redes de colabora????o
+
+
+##CRISP-DM Fase.Atividade 2.3 - An??lise explorat??ria dos dados
+
+
+###Arquivo Profile
+
+###Arquivo Publica????o
+
+###Arquivo Orienta????o
+
+
+##CRISP-DM Fase.Atividade 2.4 - Verifica????o da qualidade dos dados. 
+
+
+#CRISP-DM Fase 3 -  __Prepara????o dos Dados__
+
+
+##CRISP-DM Fase.Atividade 3.1 - Sele????o dos dados. 
+
+
+##CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
+
+##CRISP-DM Fase.Atividade 3.3 - Constru????o dos dados
+
+
+##CRISP-DM Fase.Atividade 3.4 - Integra????o dos dados
+
+
+##CRISP-DM Fase.Atividade 3.5 -  Formata????o dos dados
+
+
+#CRISP-DM Fase 4 - __Modelagem__
+
+
+##CRISP-DM Fase.Atividade 4.1 - Sele????o das t??cnicas de modelagem
+
+##CRISP-DM Fase.Atividade 4.2 -  Realiza????o de testes de modelagem
+
+
+##CRISP-DM Fase.Atividade 4.3 -  Constru????o do modelo definitivo
+
+
+##CRISP-DM Fase.Atividade 4.4 - Avalia????o do modelo
+
+#CRISP-DM Fase 5 - __Avalia????o__
+
+
+##CRISP-DM Fase.Atividade 5.1 - Avalia????o dos resultados
+
+##CRISP-DM Fase.Atividade 5.2 - Revis??o do processo
+
+
+##CRISP-DM Fase.Atividade 5.3 -  Determina????o dos etapas seguintes
+
+
+#CRISP-DM Fase 6 - __Implanta????o__ (_deployment_)
+
+##CRISP-DM Fase.Atividade 6.1 -  Planejamento da transi????o 
+
+
+##CRISP-DM Fase.Atividade 6.2 -  Planejamento do monitoramento dos produtos 
+
+
+##CRISP-DM Fase.Atividade 6.3 -  Planejamento de manute????o 
+
+
+##CRISP-DM Fase.Atividade 6.4 -  Produ????o do relat??rio final
+
+
+##CRISP-DM Fase.Atividade 6.5 -  Apresenta????o do relat??rio final
+
+
+##CRISP-DM Fase.Atividade 6.6 -  Revis??o sobre a execu????o do projeto
+
+
+# Refer??ncias
+
+* Fernandes, Jorge H C, Ricardo Barros Sampaio, e Jo??o Ribas de Moura. "Ci??ncia de Dados para Todos (Data Science   For All) - 2018.1 - An??lise da Produ????o Cient??fica e Acad??mica da Universidade de Bras??lia - Modelo de Relat??rio Final da Disciplina - Departamento de Ci??ncia da Computa????o da UnB". Disciplina 116297 - T??picos Avan??ados em Computadores, turma D, do semestre 2018.1, do Departamento de Ci??ncia da Computa????o do Instituto de Ci??ncias Exatas da Universidade de Bras??lia, 13 de junho de 2018.
