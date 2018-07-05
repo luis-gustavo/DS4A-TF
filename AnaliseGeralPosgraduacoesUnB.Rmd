@@ -15,11 +15,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introdu????o
 
-
-
 #Metodologia
 
+A metodologia aplicada para produ????o desse relat??rio ?? a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). O CRISP-DM divide o processo de minera????o de dados em seis fases principais. A sequ??ncia dessas fases n??o ?? rigorosa e se move iterativamente entre as fases, como for necess??rio.
+
+![CRISP-DM](images/CRISP-DM_Process_Diagram.png)
+_Figura I_
+
+Na _figura I_ as setas mostradas n  a imagem do processo indicam as depend??ncias mais importantes e ocorrentes entre as fases do processo. O c??rculo externo no diagrama simboliza a natureza c??clica da pr??pria minera????o de dados. Um processo de minera????o de dados continua depois que uma solu????o foi implementada.
+
+
 ## Delimita????es iniciais
+
 
 ###Dom??nio de Aplica????o do projeto
 
@@ -35,6 +42,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ##Modelo de Refer??ncia CRISP-DM
 
+O ciclo de vida completo de um projeto de minera????o de dados ?? representado em seis fases, no processo do CRISP-DM. Na _figura II_ ?? esbo??ado as fases acompanhados das tarefas e sa??das geradas.
+
+![Crisp-DM-phases](images/crisp-dm-phases.png)
+_Figura II_
+
+##Como surgiu o CRISP-DM?
+O CRISP-DM foi idealizado no ano de 1996 e se tornou um projeto da Uni??o Europeia sob a iniciativa de financiamento _European Strategic Program on Research in Information Technology_ (ESPRIT) no ano de 1997. O projeto foi liderado por cinco empresas: SPSS, Teradata, Daimler AG, NCR Corporation e OHRA. O modelo de trabalho nasceu a partir da iniciativa de profissionais que trabalhavam com data mining.
 
 ###Por que usar o CRISP-DM?
 
