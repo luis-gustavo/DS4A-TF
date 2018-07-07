@@ -1,22 +1,22 @@
 ---
-title: Ci<c3><aa>ncia de Dados para Todos (Data Science For All) - 2018.1 - An<c3><a1>lise
-  da Produ<c3><a7><c3><a3>o Cient<c3><ad>fica e Acad<c3><aa>mica da Universidade de
-  Bras<c3><ad>lia - Relat<c3><b3>rio Final da Disciplina - <c3><81>reas Geografia,
-  Geoci<c3><aa>ncias Aplicadas e Geodin<c3><a2>mica e Geologia
+title: Ciência de Dados para Todos (Data Science For All) - 2018.1 - Análise
+  da Produção Científica e Acadêmica da Universidade de
+  Brasília - Relatório Final da Disciplina - Áreas Geografia,
+  Geociências Aplicadas e Geodinâmica e Geologia
 date: "02/07/2018"
 output:
   pdf_document: default
   word_document: default
   html_document:
     df_print: paged
-authors: Diogo, Ricardo Souza Rachaus e Luis Gustavo Avelino de Lima Jacinto
+authors: Diogo Luís Teixeira de Macedo Sampaio, Ricardo Souza Rachaus e Luis Gustavo Avelino de Lima Jacinto
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introdu????o
+# Introdução
 
 A análise da Produção Científica e Acadêmica da Universidade de Brasília é relevante para o entendimento de como a Universidade está gerindo e investindo seus recursos, para as pessoas do meio acadêmico obterem informações que lhe sejam úteis e contribui na divulgação do conhecimento científico através de uma abordagem simplificada do mesmo para as pessoas não inseridas nesse ambiente. Assim, esse trabalho tem como objetivo o uso da disciplina de Ciência dos Dados para analisar, entender e gerar novas informações sobre os dados acadêmicos da Universidade de Brasília.
 Esse trabalho terá o enfoque na área de Geografia, devido a gama de áreas existentes na universidade, dessa forma permitindo uma análise mais detalhe e robusta dos dados a serem trabalhos. Para a análise, será utilizado *datasets* referentes aos professores, publicações e orientações dos mesmos, esses *datasets* cujos foram disponibilizados na plataforma [E-Lattes](http://elattes.com.br/).
@@ -24,87 +24,87 @@ Por fim, ao longo desse trabalho será mostrado como um trabalho de Ciência d
 
 #Metodologia
 
-A metodologia aplicada para produ????o desse relat??rio ?? a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). O CRISP-DM divide o processo de minera????o de dados em seis fases principais. A sequ??ncia dessas fases n??o ?? rigorosa e se move iterativamente entre as fases, como for necess??rio.
+A metodologia aplicada para produção desse relatório é a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). O CRISP-DM divide o processo de mineração de dados em seis fases principais. A sequência dessas fases não é rigorosa e se move iterativamente entre as fases, como for necessário.
 
 ![CRISP-DM](images/CRISP-DM_Process_Diagram.png)
 _Figura I_
 
-Na _figura I_ as setas mostradas na imagem do processo indicam as depend??ncias mais importantes e ocorrentes entre as fases do processo. O c??rculo externo no diagrama simboliza a natureza c??clica da pr??pria minera????o de dados. Um processo de minera????o de dados continua depois que uma solu????o foi implementada.
+Na _figura I_ as setas mostradas na imagem do processo indicam as dependências mais importantes e ocorrentes entre as fases do processo. O círculo externo no diagrama simboliza a natureza cíclica da própria mineração de dados. Um processo de mineração de dados continua depois que uma solução foi implementada.
 
 
-## Delimita????es iniciais
+## Delimitações iniciais
 
 
-###Dom??nio de Aplica????o do projeto
+###Domínio de Aplicação do projeto
 
 
-<!--registrada na [base de curr??culos Lattes](lattes.cnpq.br), do CNPq.-->
+<!--registrada na [base de currículos Lattes](lattes.cnpq.br), do CNPq.-->
 
 ###Tipo de Problema abordado
 
 
 
-###Conjunto de Ferramentas e T??cnicas
+###Conjunto de Ferramentas e Técnicas
 
 
-##Modelo de Refer??ncia CRISP-DM
+##Modelo de Referência CRISP-DM
 
-O ciclo de vida completo de um projeto de minera????o de dados ?? representado em seis fases, no processo do CRISP-DM. Na _figura II_ ?? esbo??ado as fases acompanhados das tarefas e sa??das geradas.
+O ciclo de vida completo de um projeto de mineração de dados é representado em seis fases, no processo do CRISP-DM. Na _figura II_ é esboçado as fases acompanhados das tarefas e saídas geradas.
 
 ![Crisp-DM-phases](images/crisp-dm-phases.png)
 _Figura II_
 
 ##Como surgiu o CRISP-DM?
-O CRISP-DM foi idealizado no ano de 1996 e se tornou um projeto da Uni??o Europeia sob a iniciativa de financiamento _European Strategic Program on Research in Information Technology_ (ESPRIT) no ano de 1997. O projeto foi liderado por cinco empresas: SPSS, Teradata, Daimler AG, NCR Corporation e OHRA. O modelo de trabalho nasceu a partir da iniciativa de profissionais que trabalhavam com data mining.
+O CRISP-DM foi idealizado no ano de 1996 e se tornou um projeto da União Europeia sob a iniciativa de financiamento _European Strategic Program on Research in Information Technology_ (ESPRIT) no ano de 1997. O projeto foi liderado por cinco empresas: SPSS, Teradata, Daimler AG, NCR Corporation e OHRA. O modelo de trabalho nasceu a partir da iniciativa de profissionais que trabalhavam com data mining.
 
 ###Por que usar o CRISP-DM?
 
 
-### Organiza????o hier??rquica de atividades em fases
+### Organização hierárquica de atividades em fases
 
 
 ### Seis Fases do CRISP-DM
 
 
-# CRISP-DM Fase 1 - Entendimento do Neg??cio
+# CRISP-DM Fase 1 - Entendimento do Negócio
 
-##O que ?? o Sistema Nacional de P??s-Gradua????o? (Contextualiza????o)
-
-
-
-###Os Col??gios, Grandes ??reas e ??reas da P??s-Gradua????o Brasileira
+##O que é o Sistema Nacional de Pós-Graduação? (Contextualização)
 
 
-####Col??gio de Ci??ncias da vida
 
-CI??NCIAS AGR??RIAS| CI??NCIAS BIOL??GICAS| CI??NCIAS DA SA??DE
+###Os Colégios, Grandes Áreas e Áreas da Pós-Graduação Brasileira
+
+
+####Colégio de Ciências da vida
+
+CIÊNCIAS AGRÁRIAS| CIÊNCIAS BIOLÓGICAS| CIÊNCIAS DA SAÚDE
 -|-|-
-Ci??ncia de Alimentos |Biodiversidade |Educa????o F??sica
-Ci??ncias Agr??rias I |Ci??ncias Biol??gicas I |Enfermagem
-Medicina Veterin??ria |Ci??ncias Biol??gicas II |Farm??cia
-Zootecnia / Recursos Pesqueiros |Ci??ncias Biol??gicas III |Medicina I
+Ciência de Alimentos |Biodiversidade |Educação Física
+Ciências Agrárias I |Ciências Biológicas I |Enfermagem
+Medicina Veterinária |Ciências Biológicas II |Farmácia
+Zootecnia / Recursos Pesqueiros |Ciências Biológicas III |Medicina I
 - |- |Medicina II
 - |- |Medicina III
-- |- |Nutri????o
+- |- |Nutrição
 - |- |Odontologia
-- |- |Sa??de Coletiva
+- |- |Saúde Coletiva
 
 
-####Col??gio de Ci??ncias Exatas, Tecnol??gicas e Multidisciplinar
+####Colégio de Ciências Exatas, Tecnológicas e Multidisciplinar
 
-CI??NCIAS EXATAS E DA TERRA|ENGENHARIAS|MULTIDISCIPLINAR
+CIÊNCIAS EXATAS E DA TERRA|ENGENHARIAS|MULTIDISCIPLINAR
 -|-|-
-Astronomia / F??sica |Engenharias I |Biotecnologia
-Ci??ncia da Computa????o |Engenharias II |Ci??ncias Ambientais
+Astronomia / Física |Engenharias I |Biotecnologia
+Ciência da Computação |Engenharias II |Ciências Ambientais
 Geoci??ncias |Engenharias III |Ensino
-Matem??tica / Probabilidade e Estat??stica |Engenharias IV |Interdisciplinar
-Qu??mica | - |Materiais
+Matemática / Probabilidade e Estatística |Engenharias IV |Interdisciplinar
+Química | - |Materiais
 
 
-####Col??gio de Humanidades
+####Colégio de Humanidades
 
 
-CI??NCIAS HUMANAS | CI??NCIAS SOCIAIS APLICADAS | LINGU??STICA, LETRAS E ARTES
+CIÊNCIAS HUMANAS | CIÊNCIAS SOCIAIS APLICADAS | LINGUÍSTICA, LETRAS E ARTES
 -|-|-
 Antropol/Arqueol | Admin.P??b./Empr.,C.Cont??b. e Tur.|Artes
 Ci??ncia Pol. e Rel. Int. |Arquit., Urban. e Design | Lingu??stica e Literatura
@@ -117,26 +117,26 @@ Psicologia|-|-
 Sociologia|-|-
 
 
-##A UnB dentro do Sistema Nacional de P??s-Gradua????o (Contextualiza????o)
+##A UnB dentro do Sistema Nacional de Pós-Graduação (Contextualização)
 
-### O que ?? a UnB?
+### O que é a UnB?
 
-###Descri????o das p??s-gradua????es da UnB
-
-
-###Outros aspectos que caracterizam a produ????o cient??fica e acad??mica da UnB
+###Descrição das pós-graduações da UnB
 
 
-## O que a Organiza????o precisa realmente alcan??ar?
+###Outros aspectos que caracterizam a produção científica e acadêmica da UnB
 
 
-##Avalia????o das Circunst??ncias
+## O que a Organização precisa realmente alcançar?
 
 
-###Avalia????o preliminar das p??s-gradua????es na UnB
+##Avaliação das Circunstâncias
 
 
-###Avalia????o preliminar da produ????o cient??fica e acad??mica da UnB
+###Avaliação preliminar das pós-graduações na UnB
+
+
+###Avaliação preliminar da produção científica e acadêmica da UnB
 
 
 #CRISP-DM Fase 2 - Entendimento dos Dados
@@ -144,24 +144,24 @@ Sociologia|-|-
 
 ##CRISP-DM Fase.Atividade 2.1 - Coleta inicial dos dados
 
-###Perfil profissional dos docentes vinculados ??s p??s-gradua????es
+###Perfil profissional dos docentes vinculados às pós-graduações
 
 
-###Orienta????es de mestrado e doutorado realizadas pelos docentes vinculados ??s p??s-gradua????es
+###Orientações de mestrado e doutorado realizadas pelos docentes vinculados às pós-graduações
 
 
 
-###Produ????o bibliogr??fica gerada pelos docentes vinculados ??s p??s-gradua????es
+###Produção bibliográfica gerada pelos docentes vinculados às pós-graduações
 
 
-###Agrupamento dos docentes conforme ??reas de atua????o
+###Agrupamento dos docentes conforme áreas de atuação
 
-###Redes de colabora????o entre docentes
+###Redes de colaboração entre docentes
 
 
-##CRISP-DM Fase.Atividade 2.2 - Descri????o dos Dados
+##CRISP-DM Fase.Atividade 2.2 - Descrição dos Dados
 
-Para leitura e manipula????o dos dados utilizados, ser??o utilizadas primordialmente as cinco bibliotecas a seguirs 
+Para leitura e manipulação dos dados utilizados, serão utilizadas primordialmente as cinco bibliotecas a seguir
 
 ```{r library-load}
 library(jsonlite)
