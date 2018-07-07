@@ -19,56 +19,84 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introdução
 
 A análise da Produção Científica e Acadêmica da Universidade de Brasília é relevante para o entendimento de como a Universidade está gerindo e investindo seus recursos, para as pessoas do meio acadêmico obterem informações que lhe sejam úteis e contribui na divulgação do conhecimento científico através de uma abordagem simplificada do mesmo para as pessoas não inseridas nesse ambiente. Assim, esse trabalho tem como objetivo o uso da disciplina de Ciência dos Dados para analisar, entender e gerar novas informações sobre os dados acadêmicos da Universidade de Brasília.
+
 Esse trabalho terá o enfoque nas áreas de Geografia, Geologia, Geociências Aplicadas e Geodinâmica, devido a gama de áreas existentes na universidade, dessa forma permitindo uma análise mais detalhada e robusta dos dados a serem trabalhos. Para a análise, será utilizado *datasets* referentes aos professores, publicações e orientações dos mesmos, os quais foram disponibilizados na plataforma [E-Lattes](http://elattes.com.br/).
+
 Por fim, ao longo desse trabalho será demonstrado como é realizado um trabalho de Ciência dos Dados, incluindo o conhecimento do contexto dos dados que serão trabalhados, seleção dos dados mais relevantes, limpeza e análise para gerar gráficos e informações de utilidade para aqueles interessados nas produções científicas e acadêmicas, além da possibilidade de obter informações desconhecidas até então. Com isso, esperamos que ao fim desse trabalho o entendimento de como as áreas de Geografia e Geociências em geral da Universidade de Brasília estão trabalhando e pesquisando.
+
 
 # Metodologia
 
-A metodologia aplicada para produção desse relatório é a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). É ideal para Big Data e demais cenários que envolvam processos relacionados à análise de grandes volumes de dados. O CRISP-DM divide o processo de mineração de dados em seis fases principais. A sequência dessas fases não é rigorosa e se move iterativamente entre as fases, como for necessário.
+Foi utilizada a linguagem R e plataforma RStudio para a manipulação e análise dos dados, e este documento foi gerado no formato R Markdown. Foram utilizados as seguintes bibliotecas no RStudio:
+
+```{r library-load}
+library(jsonlite)
+library(listviewer)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(readr)
+library(purrr)
+library(tibble)
+```
+
+
+## CRISP-DM
+
+A metodologia aplicada para produção desse relatório é a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). É ideal para Big Data e demais cenários que envolvam processos relacionados à análise de grandes volumes de dados. O CRISP-DM divide o processo de mineração de dados em seis fases principais. A sequência dessas fases não é rigorosa e se move iterativamente entre as fases, como for necessário. Dentro de cada fase no CRISP-DM existe uma estrutura hierárquica de atividades genéricas para serem realizadas, que podem determinar a execução de atividades específicas. As etapas são definidas a seguir:
+
+### Business Understanding: Entendimento do negócio
+Etapa em que busca-se uma compreensão adequada do problema que necessita ser resolvido. São definidos
+os principais objetivos e expectativas em relação ao trabalho como um todo, e é feita a Avaliação das
+Circunstâncias para definir recursos ou dificuldades que podem influenciar o projeto.
+
+### Data Understanding: Compreensão dos dados
+Tem o objetivo de inspecionar, organizar e descrever todos os dados disponíveis. Busca-se saber quais dados
+podem ser relevantes para decifrar o problema. É nesta etapa em que ocorrem: a Coleta inicial dos dados; a
+Descrição dos dados; a Análise exploratória dos dados; a Verificação de sua qualidade.
+
+### Data Preparation: Preparação dos dados
+Nesta etapa o profissional deverá realizar a manipulação técnica dos dados, realizando a sua “filtragem” para
+torná-los bem definidos, organizados e bem inspecionados. É preciso preparar todas as databases, definir o
+formato e os atributos dos dados que serão trabalhados, e ajustar demais questões técnicas. É dividida nas
+atividades de: Seleção dos dados; Limpeza dos dados: Construção dos dados, ou seja, a criação de novas
+variáveis que auxiliam a análise; Integração dos dados; Formatação dos dados, para facilitar a análise.
+
+### Modeling: Modelagem
+São selecionadas e aplicadas as técnicas de mineração de dados mais apropriadas, dependendo dos objetivos
+identificados na etapa de entendimento do negócio. É dividida em quatro atividades: Seleção das técnicas de
+modelagem; Testes de modelagem; Construção de modelo com base nos testes; Avaliação do modelo.
+
+### Evaluation: Avaliação do modelo
+Trata-se do acompanhamento dos resultados objetivos e a avaliação da aplicabilidade confiável das informações
+e conhecimentos obtidos. Possui três tarefas: Avaliação dos resultados; Revisão do processo; Determinação
+dos etapas seguintes, se será necessário realizar a revisão de passos tomados.
+
+### Deployment: Desenvolvimento
+É a aplicação prática de todo o conhecimento que foi obtido por meio do trabalho de mineração e modelagem
+a partir das análises dos dados realizadas. O conhecimento obtido deve ser apresentado de forma palpável e
+aplicável ao cliente.
+
 
 ![CRISP-DM](images/CRISP-DM_Process_Diagram.png)
 _Figura I_
 
-Na _figura I_ as setas mostradas na imagem do processo indicam as dependências mais importantes e ocorrentes entre as fases do processo. O círculo externo no diagrama simboliza a natureza cíclica da própria mineração de dados. Um processo de mineração de dados continua depois que uma solução foi implementada.
+Na _figura I_ as setas mostradas na imagem do processo indicam as dependências mais importantes e ocorrentes entre as fases do processo. O círculo externo no diagrama simboliza a natureza cíclica da própria mineração de dados. Um processo de mineração de dados continua mesmo depois que uma solução foi implementada.
 
-
-## Delimitações iniciais
-
-
-###Domínio de Aplicação do projeto
-
-
-<!--registrada na [base de currículos Lattes](lattes.cnpq.br), do CNPq.-->
-
-###Tipo de Problema abordado
-
-
-
-###Conjunto de Ferramentas e Técnicas
-
-
-##Modelo de Referência CRISP-DM
-
-O ciclo de vida completo de um projeto de mineração de dados é representado em seis fases, no processo do CRISP-DM. Na _figura II_ é esboçado as fases acompanhados das tarefas e saídas geradas.
+Na _figura II_ é esboçado as fases acompanhados das tarefas e saídas geradas.
 
 ![Crisp-DM-phases](images/crisp-dm-phases.png)
 _Figura II_
 
-##Como surgiu o CRISP-DM?
+### Como surgiu o CRISP-DM?
+
 O CRISP-DM foi idealizado no ano de 1996 e se tornou um projeto da União Europeia sob a iniciativa de financiamento _European Strategic Program on Research in Information Technology_ (ESPRIT) no ano de 1997. O projeto foi liderado por cinco empresas: SPSS, Teradata, Daimler AG, NCR Corporation e OHRA. O modelo de trabalho nasceu a partir da iniciativa de profissionais que trabalhavam com data mining.
-
-###Por que usar o CRISP-DM?
-
-
-### Organização hierárquica de atividades em fases
-
-
-### Seis Fases do CRISP-DM
 
 
 # CRISP-DM Fase 1 - Entendimento do Negócio
 
-##O que é o Sistema Nacional de Pós-Graduação? (Contextualização)
+## O que é o Sistema Nacional de Pós-Graduação? (Contextualização)
 
 A produção do conhecimento científico, no Brasil, é predominantemente efetuada por meio do Sistema Nacional de Pós-Graduação - SNPG, e mais fortemente relacionada com a formação de doutores nesse sistema (Pátaro e Mezzomo, 2013), por meio de cursos de pós-graduação strictu sensu.
 
@@ -82,12 +110,12 @@ sobre problemas sociais, predominantemente gerado nas ditas ciências soft, espe
 Não há solução simples, mas postula-se, nesta disciplina, que uma maior agilidade na avaliação e a utilização
 de critérios mais objetivos, poderá facilitar a melhoria do sistema.
 
-###Os Colégios, Grandes Áreas e Áreas da Pós-Graduação Brasileira
+### Os Colégios, Grandes Áreas e Áreas da Pós-Graduação Brasileira
 
 A partir de 2018, as diversas áreas da pós-graduação brasileira foram organizadas na forma de colégios,
 grandes áreas e áreas, conforme apresentam as tabelas a seguir.
 
-####Colégio de Ciências da vida
+#### Colégio de Ciências da vida
 
 CIÊNCIAS AGRÁRIAS| CIÊNCIAS BIOLÓGICAS| CIÊNCIAS DA SAÚDE
 -|-|-
@@ -102,7 +130,7 @@ Zootecnia / Recursos Pesqueiros |Ciências Biológicas III |Medicina I
 - |- |Saúde Coletiva
 
 
-####Colégio de Ciências Exatas, Tecnológicas e Multidisciplinar
+#### Colégio de Ciências Exatas, Tecnológicas e Multidisciplinar
 
 CIÊNCIAS EXATAS E DA TERRA|ENGENHARIAS|MULTIDISCIPLINAR
 -|-|-
@@ -113,7 +141,7 @@ Matemática / Probabilidade e Estatística |Engenharias IV |Interdisciplinar
 Química | - |Materiais
 
 
-####Colégio de Humanidades
+#### Colégio de Humanidades
 
 
 CIÊNCIAS HUMANAS | CIÊNCIAS SOCIAIS APLICADAS | LINGUÍSTICA, LETRAS E ARTES
@@ -129,9 +157,14 @@ Psicologia|-|-
 Sociologia|-|-
 
 
-##A UnB dentro do Sistema Nacional de Pós-Graduação (Contextualização)
+## A UnB dentro do Sistema Nacional de Pós-Graduação (Contextualização)
 
 ### O que é a UnB?
+
+"Resultado do sonho e do trabalho de educadores como Darcy Ribeiro e Anísio Teixeira, a UnB é, desde 1962, ano de sua criação, uma das principais referências acadêmicas nacionais. A diversidade cultural presente em seus quatro campi é uma de suas características marcantes. A pluralidade, aliada à busca permanente por soluções inovadoras, move a produção científica e o cotidiano da instituição.
+A UnB segue atuante em todas as áreas do conhecimento, aberta às principais demandas do Brasil e do mundo." (www.unb.br/a-unb)
+
+
 
 ###Descrição das pós-graduações da UnB
 
