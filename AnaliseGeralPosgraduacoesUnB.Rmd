@@ -1,12 +1,15 @@
 ---
-title:  Ci??ncia de Dados para Todos (Data Science
-  For All) - 2018.1 - An??lise da Produ????o Cient??fica e Acad??mica da Universidade de Bras??lia - Relat??rio Final da Disciplina - ??reas Geografia, Geoci??ncias Aplicadas e Geodin??mica e Geologia
-authors: "Diogo, Ricardo e Luis Gustavo Avelino de Lima Jacinto"
+title: Ci<c3><aa>ncia de Dados para Todos (Data Science For All) - 2018.1 - An<c3><a1>lise
+  da Produ<c3><a7><c3><a3>o Cient<c3><ad>fica e Acad<c3><aa>mica da Universidade de
+  Bras<c3><ad>lia - Relat<c3><b3>rio Final da Disciplina - <c3><81>reas Geografia,
+  Geoci<c3><aa>ncias Aplicadas e Geodin<c3><a2>mica e Geologia
 date: "02/07/2018"
 output:
+  pdf_document: default
+  word_document: default
   html_document:
     df_print: paged
-  pdf_document: default
+authors: Diogo, Ricardo Souza Rachaus e Luis Gustavo Avelino de Lima Jacinto
 ---
 
 ```{r setup, include=FALSE}
@@ -15,6 +18,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introdu????o
 
+A análise da Produção Científica e Acadêmica da Universidade de Brasília é relevante para o entendimento de como a Universidade está gerindo e investindo seus recursos, para as pessoas do meio acadêmico obterem informações que lhe sejam úteis e contribui na divulgação do conhecimento científico através de uma abordagem simplificada do mesmo para as pessoas não inseridas nesse ambiente. Assim, esse trabalho tem como objetivo o uso da disciplina de Ciência dos Dados para analisar, entender e gerar novas informações sobre os dados acadêmicos da Universidade de Brasília.
+Esse trabalho terá o enfoque na área de Geografia, devido a gama de áreas existentes na universidade, dessa forma permitindo uma análise mais detalhe e robusta dos dados a serem trabalhos. Para a análise, será utilizado *datasets* referentes aos professores, publicações e orientações dos mesmos, esses *datasets* cujos foram disponibilizados na plataforma [E-Lattes](http://elattes.com.br/).
+Por fim, ao longo desse trabalho será mostrado como um trabalho de Ciência dos Dados acontece, desde o conhecimento do contexto dos dados que serão trabalhados, até seleção dos dados mais relevantes, limpeza e análise para gerar gráficos e informações de utilidade para aqueles interessados nas produções científicas e acadêmicas, além da possibilidade de informações desconhecidas até então. Com isso, esperamos que ao fim desse trabalho o entendimento de como a área de Geografia da Universidade de Brasília está trabalhando e pesquisando.
+
 #Metodologia
 
 A metodologia aplicada para produ????o desse relat??rio ?? a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). O CRISP-DM divide o processo de minera????o de dados em seis fases principais. A sequ??ncia dessas fases n??o ?? rigorosa e se move iterativamente entre as fases, como for necess??rio.
@@ -22,7 +29,7 @@ A metodologia aplicada para produ????o desse relat??rio ?? a _Cross Industry Sta
 ![CRISP-DM](images/CRISP-DM_Process_Diagram.png)
 _Figura I_
 
-Na _figura I_ as setas mostradas n  a imagem do processo indicam as depend??ncias mais importantes e ocorrentes entre as fases do processo. O c??rculo externo no diagrama simboliza a natureza c??clica da pr??pria minera????o de dados. Um processo de minera????o de dados continua depois que uma solu????o foi implementada.
+Na _figura I_ as setas mostradas na imagem do processo indicam as depend??ncias mais importantes e ocorrentes entre as fases do processo. O c??rculo externo no diagrama simboliza a natureza c??clica da pr??pria minera????o de dados. Um processo de minera????o de dados continua depois que uma solu????o foi implementada.
 
 
 ## Delimita????es iniciais
