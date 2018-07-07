@@ -19,12 +19,12 @@ knitr::opts_chunk$set(echo = TRUE)
 # Introdução
 
 A análise da Produção Científica e Acadêmica da Universidade de Brasília é relevante para o entendimento de como a Universidade está gerindo e investindo seus recursos, para as pessoas do meio acadêmico obterem informações que lhe sejam úteis e contribui na divulgação do conhecimento científico através de uma abordagem simplificada do mesmo para as pessoas não inseridas nesse ambiente. Assim, esse trabalho tem como objetivo o uso da disciplina de Ciência dos Dados para analisar, entender e gerar novas informações sobre os dados acadêmicos da Universidade de Brasília.
-Esse trabalho terá o enfoque na área de Geografia, devido a gama de áreas existentes na universidade, dessa forma permitindo uma análise mais detalhe e robusta dos dados a serem trabalhos. Para a análise, será utilizado *datasets* referentes aos professores, publicações e orientações dos mesmos, esses *datasets* cujos foram disponibilizados na plataforma [E-Lattes](http://elattes.com.br/).
-Por fim, ao longo desse trabalho será mostrado como um trabalho de Ciência dos Dados acontece, desde o conhecimento do contexto dos dados que serão trabalhados, até seleção dos dados mais relevantes, limpeza e análise para gerar gráficos e informações de utilidade para aqueles interessados nas produções científicas e acadêmicas, além da possibilidade de informações desconhecidas até então. Com isso, esperamos que ao fim desse trabalho o entendimento de como a área de Geografia da Universidade de Brasília está trabalhando e pesquisando.
+Esse trabalho terá o enfoque nas áreas de Geografia, Geologia, Geociências Aplicadas e Geodinâmica, devido a gama de áreas existentes na universidade, dessa forma permitindo uma análise mais detalhada e robusta dos dados a serem trabalhos. Para a análise, será utilizado *datasets* referentes aos professores, publicações e orientações dos mesmos, os quais foram disponibilizados na plataforma [E-Lattes](http://elattes.com.br/).
+Por fim, ao longo desse trabalho será demonstrado como é realizado um trabalho de Ciência dos Dados, incluindo o conhecimento do contexto dos dados que serão trabalhados, seleção dos dados mais relevantes, limpeza e análise para gerar gráficos e informações de utilidade para aqueles interessados nas produções científicas e acadêmicas, além da possibilidade de obter informações desconhecidas até então. Com isso, esperamos que ao fim desse trabalho o entendimento de como as áreas de Geografia e Geociências em geral da Universidade de Brasília estão trabalhando e pesquisando.
 
-#Metodologia
+# Metodologia
 
-A metodologia aplicada para produção desse relatório é a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). O CRISP-DM divide o processo de mineração de dados em seis fases principais. A sequência dessas fases não é rigorosa e se move iterativamente entre as fases, como for necessário.
+A metodologia aplicada para produção desse relatório é a _Cross Industry Standard Process for Data Mining_ (CRISP-DM). É ideal para Big Data e demais cenários que envolvam processos relacionados à análise de grandes volumes de dados. O CRISP-DM divide o processo de mineração de dados em seis fases principais. A sequência dessas fases não é rigorosa e se move iterativamente entre as fases, como for necessário.
 
 ![CRISP-DM](images/CRISP-DM_Process_Diagram.png)
 _Figura I_
@@ -70,10 +70,22 @@ O CRISP-DM foi idealizado no ano de 1996 e se tornou um projeto da União Europe
 
 ##O que é o Sistema Nacional de Pós-Graduação? (Contextualização)
 
+A produção do conhecimento científico, no Brasil, é predominantemente efetuada por meio do Sistema Nacional de Pós-Graduação - SNPG, e mais fortemente relacionada com a formação de doutores nesse sistema (Pátaro e Mezzomo, 2013), por meio de cursos de pós-graduação strictu sensu.
 
+Fernandes e Sampaio (2017) já indicaram que a ciência é reconhecidamente um elemento essencial para o desenvolvimento social e econômico de qualquer nação. Assim sendo, faz-se mister aprimorar o SNPG como forma de promoção desse crescimento, visando maximizar o retorno decorrente do emprego dos recursos nele aplicados. A promoção do crescimento do SNPG se dá predominantemente por meio de avaliações regulares de seus programas de pós-graduação, sob responsabilidade da CAPES, que realiza a cada quatro anos um complexo (Leite, 2018, p. 13) e custoso processo de coleta de dados, análise e deliberação sobre as pós-graduações strictu sensu, em coerência com o estabelecido no Plano Nacional de Pós-Graduação (PNPG) 2012-2020 (CAPES, 2010) e nos diversos documentos que definem os critérios de organização da pós-graduação em cada área do conhecimento (CAPES, 2018). Leite (2018) faz uma apresentação geral de como se organizam e são avaliadas as pós-graduações no Brasil.
+
+O Plano Nacional de Pós-Graduação (PNPG), por outro lado, define diretrizes estratégicas para desenvolvimento da pós-graduação brasileira, que deve abordar prioritariamente grandes temas de interesse nacional, tais como a redução das assimetrias de desenvolvimento entre as regiões do Brasil, a formação de professores para a educação básica, a formação de recursos humanos para as empresas, a resposta aos grandes desafios brasileiros sobre Água, Energia, Transporte, Controle de Fronteiras, Agronegócio, Amazônia, Amazônia Azul (Mar), Saúde, Defesa, Programa Espacial, além de Justiça, Segurança Pública, Criminologia e Desequilíbrio Regional. O PNPG também traça as diretrizes para financiamento da pós-graduação e sua internacionalização, apresentando conclusões e recomendações.
+
+As avaliações do SNPG, ao atribuirem mensurações de desempenho às diversas pós-graduações que dele fazem parte, geram incentivos e penalidades aos programas, tendo em vista a limitada disponibilidade de recursos para investimento em bolsas, taxas de bancada etc. Embora o sistema seja altamente sofisticado ele é também altamente criticado (Azevedo et al., 2016), sobretudo porque há percalços na busca por um equilíbrio entre as diferentes concepções de finalidade da ciência. Se de um lado a promoção do conhecimento gerado predominantemente nas ditas ciências hard constribui para criar fluxos econômicos mais intensos, isso não significa que essa promoção possa ocorrer em detrimento da menor promoção na geração de conhecimento
+sobre problemas sociais, predominantemente gerado nas ditas ciências soft, especialmente das áreas de humanidades, sob pena de ampliação de desigualdades (Azevedo et al., 2016).
+
+Não há solução simples, mas postula-se, nesta disciplina, que uma maior agilidade na avaliação e a utilização
+de critérios mais objetivos, poderá facilitar a melhoria do sistema.
 
 ###Os Colégios, Grandes Áreas e Áreas da Pós-Graduação Brasileira
 
+A partir de 2018, as diversas áreas da pós-graduação brasileira foram organizadas na forma de colégios,
+grandes áreas e áreas, conforme apresentam as tabelas a seguir.
 
 ####Colégio de Ciências da vida
 
@@ -96,7 +108,7 @@ CIÊNCIAS EXATAS E DA TERRA|ENGENHARIAS|MULTIDISCIPLINAR
 -|-|-
 Astronomia / Física |Engenharias I |Biotecnologia
 Ciência da Computação |Engenharias II |Ciências Ambientais
-Geoci??ncias |Engenharias III |Ensino
+Geociências |Engenharias III |Ensino
 Matemática / Probabilidade e Estatística |Engenharias IV |Interdisciplinar
 Química | - |Materiais
 
@@ -106,13 +118,13 @@ Química | - |Materiais
 
 CIÊNCIAS HUMANAS | CIÊNCIAS SOCIAIS APLICADAS | LINGUÍSTICA, LETRAS E ARTES
 -|-|-
-Antropol/Arqueol | Admin.P??b./Empr.,C.Cont??b. e Tur.|Artes
-Ci??ncia Pol. e Rel. Int. |Arquit., Urban. e Design | Lingu??stica e Literatura
-Ci??ncias da Religi??o e Teol. |Comunica????o e Informa????o|-
-Educa????o |Direito|-
+Antropol/Arqueol | Admin.Púb./Empr.,C.Contáb. e Tur.|Artes
+Ciência Pol. e Rel. Int. |Arquit., Urban. e Design | Linguística e Literatura
+Ciências da Religião e Teol. |Comunicação e Informação|-
+Educação |Direito|-
 Filosofia |Economia|-
 Geografia |Planej. Urbano e Reg. / Demografia|-
-Hist??ria |Servi??o Social |-
+História |Serviço Social |-
 Psicologia|-|-
 Sociologia|-|-
 
