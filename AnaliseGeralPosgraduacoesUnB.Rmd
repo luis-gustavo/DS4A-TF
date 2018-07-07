@@ -84,10 +84,10 @@ _Figura I_
 
 Na _figura I_ as setas mostradas na imagem do processo indicam as dependências mais importantes e ocorrentes entre as fases do processo. O círculo externo no diagrama simboliza a natureza cíclica da própria mineração de dados. Um processo de mineração de dados continua mesmo depois que uma solução foi implementada.
 
-Na _figura II_ é esboçado as fases acompanhados das tarefas e saídas geradas.
-
 ![Crisp-DM-phases](images/crisp-dm-phases.png)
 _Figura II_
+
+Na _figura II_ é esboçado as fases acompanhados das tarefas e saídas geradas.
 
 ### Como surgiu o CRISP-DM?
 
@@ -161,13 +161,41 @@ Sociologia|-|-
 
 ### O que é a UnB?
 
-"Resultado do sonho e do trabalho de educadores como Darcy Ribeiro e Anísio Teixeira, a UnB é, desde 1962, ano de sua criação, uma das principais referências acadêmicas nacionais. A diversidade cultural presente em seus quatro campi é uma de suas características marcantes. A pluralidade, aliada à busca permanente por soluções inovadoras, move a produção científica e o cotidiano da instituição.
-A UnB segue atuante em todas as áreas do conhecimento, aberta às principais demandas do Brasil e do mundo." (www.unb.br/a-unb)
+A Universidade de Brasília (UnB) é uma universidade pública federal brasileira. É a maior instituição de ensino superior do Centro-Oeste do Brasil e uma das mais importantes do país.
+
+_"Resultado do sonho e do trabalho de educadores como Darcy Ribeiro e Anísio Teixeira, a UnB é, desde 1962, ano de sua criação, uma das principais referências acadêmicas nacionais. A diversidade cultural presente em seus quatro campi é uma de suas características marcantes. A pluralidade, aliada à busca permanente por soluções inovadoras, move a produção científica e o cotidiano da instituição. A UnB segue atuante em todas as áreas do conhecimento, aberta às principais demandas do Brasil e do mundo."_ (www.unb.br/a-unb)
+
+
+### Geografia
 
 
 
-###Descrição das pós-graduações da UnB
+### Geociências Aplicadas e Geodinâmica
 
+
+
+### Geologia
+
+O Programa de Geologia da UnB - Universidade de Brasília é vinculado ao Instituto de Geociências da UnB (IG).
+
+O IG ocupa área de mais de 6.550 m 2 no prédio do Instituto Central de Ciências (ICC). O IG possui ainda dois prédios próprios, onde estão instalados o Observatório Sismológico e o Laboratório de Geocronologia, com área adicional de 2.500 m 2 . No ICC funcionam a Direção e Secretaria, salas de aula, laboratórios, salas individuais de professores, salas para alunos de pós-graduação, o Museu de Geociências, os Centros Acadêmicos de Geologia Jorge Gushiken (CAGEO) e de Geofísica (CAGEF) e o Grupo Espeleológico da Geologia (GREGEO).
+
+IG apresenta caráter multidisciplinar e procura integrar seus pesquisadores em trabalho de equipe, em torno de um objetivo comum, que é o de realizar pesquisa de alto nível e formar recursos humanos de qualidade.
+
+O Instituto de Geociências da UnB conta com laboratórios em todas as subáreas das Geociências, aos quais os estudantes têm amplo acesso. Quase todos os laboratórios possuem equipamentos de última geração, a fim de atenderem adequadamente às atividades de ensino e pesquisa desenvolvidas no âmbito do Instituto, bem como ao intercâmbio com outras universidades, instituições de pesquisa e empresas do País e do exterior. Encontram-se em pleno funcionamento os laboratórios de laminação, preparação de amostras, separação de minerais pesados, computação, microscopia, inclusões fluidas, difratometria de raios X, microssonda eletrônica, geoquímica, isótopos estáveis, geocronologia, micropaleontologia, microscopia eletrônica de varredura, sensoriamento remoto e análise espacial, geofísica aplicada, laboratórios do Observatório Sismológico e de estudos da litosfera. O Laboratório de Geocronologia, por exemplo, possui excelente estrutura para análises geocronológicos e de geoquímica isotópica, que têm sido realizadas para a comunidade científica nacional e internacional, além de empresas públicas e privadas. Veículos apropriados para trabalhos de campo estão à disposição dos estudantes e professores.
+
+Em decorrência da qualificação e dedicação de seu corpo docente, de seus técnicos e de seus estudantes e da qualidade de sua infraestrutura, todos os cursos oferecidos pelo Instituto de Geociências são bem avaliados pelo MEC e outros institutos de avaliação:
+
+* Programa de Pós-Graduação em Geologia - 6;
+* Programa de Pós-Graduação em Geociências Aplicadas - 4;
+* Curso de Graduação em Geologia - 5;
+* Curso de Graduação em Geofísica - 4;
+* Curso de Graduação em Ciências Ambientais - 4.
+
+O Museu de Geociências é um dos principais museus da UnB. Possui acervo expressivo e diversificado, que atende à visitação diária da comunidade da UnB, de grupos de estudantes do ensino fundamental e médio e da sociedade em geral.
+
+O Observatório Sismológico (SIS) é um Centro do Instituto de Geociências (IG) da Universidade de Brasília (UnB). Suas responsabilidades envolvem três áreas, que são: o ensino (níveis de graduação e pós-graduação), a Extensão e a Pesquisa relacionada à sismicidade e à estrutura do interior da Terra. Sua principal atividade é o monitoramento sismográfico da sismicidade brasileira, natural e induzida por reservatórios. Dispõe de sede própria com boa infraestrutura física (laboratórios de Análise de Dados e de Computação; Oficina Eletrônica, Mostra de Sismologia, Biblioteca, entre outros), instrumental (sistemas sismográficos digitais completos, analisadores de espectro, gravímetro, geradores e medidores de rádio-freqüências, geradores de função, GPS’s etc.), computacional (uma rede local com seis estações de trabalho, PC’s e periféricos), e recursos humanos (professores, técnicos-administrativos, prestadores de serviços e alunos bolsistas de
+graduação e pós-graduação).
 
 ###Outros aspectos que caracterizam a produção científica e acadêmica da UnB
 
