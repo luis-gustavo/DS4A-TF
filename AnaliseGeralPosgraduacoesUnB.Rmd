@@ -27,6 +27,8 @@ Por fim, ao longo desse trabalho será demonstrado como é realizado um trabalh
 
 # Metodologia
 
+## Ferramentas e Técnicas
+
 Foi utilizada a linguagem R e plataforma RStudio para a manipulação e análise dos dados, e este documento foi gerado no formato R Markdown. Foram utilizados as seguintes bibliotecas no RStudio:
 
 ```{r library-load}
@@ -40,7 +42,6 @@ library(readr)
 library(purrr)
 library(tibble)
 ```
-
 
 ## CRISP-DM
 
@@ -123,11 +124,11 @@ Ciência de Alimentos |Biodiversidade |Educação Física
 Ciências Agrárias I |Ciências Biológicas I |Enfermagem
 Medicina Veterinária |Ciências Biológicas II |Farmácia
 Zootecnia / Recursos Pesqueiros |Ciências Biológicas III |Medicina I
-- |- |Medicina II
-- |- |Medicina III
-- |- |Nutrição
-- |- |Odontologia
-- |- |Saúde Coletiva
+-|-|Medicina II
+-|-|Medicina III
+-|-|Nutrição
+-|-|Odontologia
+-|-|Saúde Coletiva
 
 
 #### Colégio de Ciências Exatas, Tecnológicas e Multidisciplinar
