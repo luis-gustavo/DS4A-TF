@@ -900,6 +900,16 @@ head(unb.geografia.prof.df, 1)
 
 ## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
 
+Para análise do nível de internacionalização das publicações referentes ao programa de pós graduação de geografia da UnB, foi gerado o seguinte gráfico, utilizando a biblioteca ggplot2.
+```{r}
+eventos2017 <- unb.geografia.pub$EVENTO$`2017`
+names(eventos2017)
+paises <- eventos2017$pais_do_evento
+natureza <- eventos2017$natureza
+data <- data.frame(paises, natureza)
+ggplot(data, aes(x=paises, y="", col=paises)) + geom_point() + geom_jitter()
+```
+
 
 # CRISP-DM Fase 4 - __Modelagem__
 
