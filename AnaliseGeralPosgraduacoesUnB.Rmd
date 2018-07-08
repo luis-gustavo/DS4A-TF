@@ -442,17 +442,38 @@ sort(table(unb.geografia.adv$ORIENTACAO_CONCLUIDA_MESTRADO$`2017`$curso), decrea
 
 ### Descrição dos dados de produção bibliográfica
 
+Fazendo a leitura do arquivos Geografia.publication.json, e para entender sobre o conteúdo dos dados presentes dentro dele, utiliza-se a função _names_ e, a partir dela , observa-se que as publicações bibliográficas estão divididas em sete áreas principais. Representadas abaixo:
 ```{r}
 unb.gegrafia.pub <- fromJSON("data/Geografia.publication.json")
 names(unb.gegrafia.pub)
-names(unb.gegrafia.pub$PERIODICO$`2012`)
-head(sort(table(unb.gegrafia.pub$PERIODICO$`2017`$periodico), decreasing = TRUE), 10)
-head
+```
+
+Afim de entender mais sobre os dados presentes em alguns das áreas principais, foi explorados os dados de periodicos e livros no ano de 2017. Pode-se observar abaixo a quantidade de registros, os atributos que contém em cada área, os periodicos e o país de publicação dos livros. 
+
+```{r}
+length(unb.gegrafia.pub$PERIODICO$`2017`)
+names(unb.gegrafia.pub$PERIODICO$`2017`)
+sort(table(unb.gegrafia.pub$PERIODICO$`2017`$periodico), decreasing = TRUE)
+
+length(unb.gegrafia.pub$LIVRO$`2017`)
+names(unb.gegrafia.pub$LIVRO$`2017`)
+sort(table(unb.gegrafia.pub$LIVRO$`2017`$pais_de_publicacao), decreasing = TRUE)
 ```
 
 
 ### Descrição dos dados de agregação de docentes por área
 
+Fazendo a leitura do arquivo Geografia.researchers_by_area.json, que é referente a vinculação dos docentes que atuam nas áreas de pós-graduação do Sistema Nacional de Pós-Graduação da CAPES, e entendendo os atributos existentes dentro desse _dataset_ através do método _names()_ podemos criar uma tabela relacionando a área de atuação e o número de docentes vinculados. O resultado pode ser observado abaixo:
+
+```{r}
+unb.geografia.area <- fromJSON("data/Geografia.researchers_by_area.json")
+names(unb.geografia.area)
+unb.geografia.area.df <- cbind(names(unb.geografia.area$`Areas dos pesquisadores`),
+           (sapply(unb.geografia.area$`Areas dos pesquisadores`, function(x) length(x))))
+rownames(unb.geografia.area.df) <- c(1:nrow(unb.geografia.area.df)); colnames(unb.geografia.area.df) <- c("Area", "Professores")
+glimpse(unb.geografia.area.df)
+unb.geografia.area.df[]
+```
 
 ### Descrição dos dados de redes de colaboração
 
