@@ -847,8 +847,10 @@ extrai_areas_atuacao <- function(jsonProfessores){
 }
 ```
 
+## CRISP-DM Fase.Atividade 3.4 - Integração dos dados
 
 Em seguida é feito a criação do arquivo para análise, ainda tendo como base o modelo.
+
 ```{r}
 unb.geografia.prof.json <- read_file("data/Geografia.profile.json")
 unb.prof.df.capes <- read.csv("data/PesqPosCapes.csv", 
@@ -898,14 +900,13 @@ unb.geografia.prof.df <- unb.geografia.prof.df.professores %>%
       summarise(n_distinct(AreaPos)), 
     by = "idLattes")
 ```
-Em seguida, pode-ser observar a construção dos dados trabalhados, por meio das funções _head_ e _glimpse_:
+
+Por fim, pode-ser observar a construção dos dados trabalhados, por meio das funções _head_ e _glimpse_:
 
 ```{r}
 glimpse(unb.geografia.prof.df)
 head(unb.geografia.prof.df, 1)
 ```
-
-## CRISP-DM Fase.Atividade 3.4 - Integração dos dados
 
 ## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
 
