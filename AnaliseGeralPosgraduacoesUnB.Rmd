@@ -647,9 +647,11 @@ Assim, nas próximas seções será demonstrado com mais detalhes o trabalho fei
 # CRISP-DM Fase 3 - __Preparação dos Dados__
 
 
-## CRISP-DM Fase.Atividade 3.1 - Seleção dos dados. 
+## CRISP-DM Fase.Atividade 3.1 - Seleção dos dados
 
 ## CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
+
+A limpeza dos dados já está contida em conjunto com a construção dos mesmos na seção abaixo.
 
 ## CRISP-DM Fase.Atividade 3.3 - Construção dos dados
 Criação de funções para facilitar o trabalho de construção de dados, segundo o modelo: "Ciência de Dados para Todos (Data Science   For All) - 2018.1 - Análise da Produção Científica e Acadêmica da Universidade de Brasília - Modelo de Relatório Final da Disciplina - Departamento de Ciência da Computação da UnB".
