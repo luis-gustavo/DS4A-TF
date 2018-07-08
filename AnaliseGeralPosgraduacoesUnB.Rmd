@@ -640,6 +640,9 @@ head(sort(table(rbind(unb.geografia.adv.df$ori1, unb.geografia.adv.df$ori2)), de
 
 ## CRISP-DM Fase.Atividade 2.4 - Verificação da qualidade dos dados. 
 
+Conforme visto nas seções anteriores, os dados dos _datasets_ após serem trabalhados, permitem análises e entendimento da situação do programa de Pós-Graduação. Portanto, os dados referentes ao Departamento de Geografia e do Instituto de Geociências contém conteúdo de qualidade, ou seja, os dados disponíveis estão completos, ou pelo menos com uma completude suficiente para estudo, possibilitando a realização do trabalho proposto e da geração de novas informações.
+
+Assim, nas próximas seções será demonstrado com mais detalhes o trabalho feito em cima dos dados para obter uma análise com maior detalhe e de melhor qualidade até a apresentada aqui.
 
 # CRISP-DM Fase 3 - __Preparação dos Dados__
 
