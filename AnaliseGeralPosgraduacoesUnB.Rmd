@@ -646,31 +646,32 @@ head(sort(table(rbind(unb.geografia.adv.df$ori1, unb.geografia.adv.df$ori2)), de
 
 ## CRISP-DM Fase.Atividade 3.1 - Seleção dos dados. 
 
-
 ## CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
 
 ## CRISP-DM Fase.Atividade 3.3 - Construção dos dados
 
-
 ## CRISP-DM Fase.Atividade 3.4 - Integração dos dados
-
 
 ## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
 
 
 # CRISP-DM Fase 4 - __Modelagem__
 
+Essa fase não se aplica nesse relatório, visto que modelos de análise não está mais no escopo desse projeto.
 
 ## CRISP-DM Fase.Atividade 4.1 - Seleção das técnicas de modelagem
+Não se aplica.
 
 ## CRISP-DM Fase.Atividade 4.2 -  Realização de testes de modelagem
+Não se aplica.
 
-## CRISP-DM Fase.Atividade 4.3 -  Construção do modelo definitivo
+#### CRISP-DM Fase.Atividade 4.3 -  Construção do modelo definitivo
+Não se aplica.
 
-## CRISP-DM Fase.Atividade 4.4 - Avaliação do modelo
+#### CRISP-DM Fase.Atividade 4.4 - Avaliação do modelo
+Não se aplica.
 
 # CRISP-DM Fase 5 - __Avaliação__
-
 
 ## CRISP-DM Fase.Atividade 5.1 - Avaliação dos resultados
 
@@ -690,10 +691,10 @@ head(sort(table(rbind(unb.geografia.adv.df$ori1, unb.geografia.adv.df$ori2)), de
 
 
 ## CRISP-DM Fase.Atividade 6.4 -  Produção do relatório final
-
+A entrega deste realatório reflete essa etapa.
 
 ## CRISP-DM Fase.Atividade 6.5 -  Apresentação do relatório final
-
+Não se aplica, pois não haverá apresentação do relatório.
 
 ## CRISP-DM Fase.Atividade 6.6 -  Revisão sobre a execução do projeto
 
