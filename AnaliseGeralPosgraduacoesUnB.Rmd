@@ -649,6 +649,15 @@ Assim, nas próximas seções será demonstrado com mais detalhes o trabalho fei
 
 ## CRISP-DM Fase.Atividade 3.1 - Seleção dos dados
 
+Para a preparação dos dados foram selecionados dados para alguns _data frames_. A seguir está os respectivos _data frames_ e seus dados: 
+
+* Perfil: ID Lattes, resumo do CV, nome, endereço profissional, instituição, orgão, unidade, DDD, telefone, bairro, CEP, cidade, senioridade.
+* Produção: ID Lattes, produção bibliográfica, tipo de produção.
+* Orientação: ID Lattes, orientações acadêmicas, orientação.
+* Áreas de atuação: ID Lattes, áreas de atuação.
+
+Como pode ser visto, é a partir do ID Lattes que os docentes serão identificados através dos _data frames_, assim todos estes contém esse campo. Quanto aos outros dados, no caso do _data frame_ Perfil, são os dados mínimo para identificação e perfil de cada professor. Para os _data frames_ Produção, Orientação e Áreas de Atuação, são os dados mais relevantes para de cada tipo, para entender como está o funcionamento e desenvolvimento dos programas de Pós-Graduação aqui analisados.
+
 ## CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
 
 A limpeza dos dados já está contida em conjunto com a construção dos mesmos na seção abaixo.
