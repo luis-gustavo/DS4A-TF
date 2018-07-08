@@ -649,6 +649,247 @@ head(sort(table(rbind(unb.geografia.adv.df$ori1, unb.geografia.adv.df$ori2)), de
 ## CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
 
 ## CRISP-DM Fase.Atividade 3.3 - Construção dos dados
+Criação de funções para facilitar o trabalho de construção de dados, segundo o modelo: "Ciência de Dados para Todos (Data Science   For All) - 2018.1 - Análise da Produção Científica e Acadêmica da Universidade de Brasília - Modelo de Relatório Final da Disciplina - Departamento de Ciência da Computação da UnB".
+
+```{r}
+
+cv_tplista2tpchar <- function( df  ) { 
+  for( variavel in names(df)) {
+    if (class(df[[variavel]]) == "list" ) {
+      df[[variavel]] <- lapply(df[[variavel]] ,   function(x)   lista2texto( x  ) ) 
+      df[[variavel]] <- as.character( df[[variavel]] )
+    }
+  }
+  return(df)
+}
+
+lista2texto <- function( lista  ) {
+  if(is.null(lista)) {
+    return ( NULL )
+  }
+  saida <- ""
+  for( j in 1:length(lista)) { 
+    for( i in 1:length(lista[[j]]) ) {
+      elemento <- lista[[j]][i] 
+      if( !is.null(elemento)) { 
+        if( i == length(lista[[j]]) & j == length(lista)  ) { 
+          # se for o ultimo elemento nao coloque o ponto e virgula no final            
+          saida <- paste0( saida , elemento  )
+        } else {
+          # enquanto nao for o ultimo coloque ; separando os elementos concatenados 
+          saida <- paste0( saida , elemento , sep = " ; ")
+        }
+      }  
+    }
+  }
+  return( saida )
+}
+
+converte_producao2dataframe<- function( lista_producao ) {
+  df_saida <- NULL 
+  
+  for( ano in names(lista_producao)) {
+    df_saida <- rbind(df_saida , lista_producao[[ano]])
+  }
+  
+  df_saida <- cv_tplista2tpchar(df_saida)
+  return(df_saida)
+  
+
+}
+
+
+concatenadf <- function( df1, df2) { 
+  for( coluna in names(df1 ) ) {
+    if( !is.element(coluna, names(df2) )) {
+      df2[coluna] <- NA
+    }
+  }
+  
+  for( coluna in names(df2 ) ) {
+    
+    if( !is.element(coluna, names(df1) )) {
+      df1[coluna] <- NA
+    }
+  }
+  
+  df_final <- rbind(df1 , df2)
+  return(df_final)
+  
+}
+
+extrai_1perfil <- function( professor ) {
+  idLattes <- names(professor)
+  nome <- professor[[idLattes]]$nome   
+  resumo_cv <- professor[[idLattes]]$resumo_cv 
+  endereco_profissional <- professor[[idLattes]]$endereco_profissional #list 
+  instituicao <- endereco_profissional$instituicao
+  orgao <- endereco_profissional$orgao
+  unidade <- endereco_profissional$unidade
+  DDD <- endereco_profissional$DDD
+  telefone <- endereco_profissional$telefone
+  bairro <- endereco_profissional$bairro
+  cep <- endereco_profissional$cep
+  cidade <- endereco_profissional$cidade
+  senioridade <- professor[[idLattes]]$senioridade  
+  df_1perfil <- data.frame( idLattes , nome, resumo_cv ,instituicao , 
+                           orgao, unidade , DDD, telefone, bairro,cep,cidade , senioridade,
+                           stringsAsFactors = FALSE)
+  
+  return(df_1perfil)  
+}
+
+extrai_perfis <- function(jsonProfessores) {
+  df_saida <- data.frame()
+  for( i in 1:length(jsonProfessores)) {
+    jsonProfessor <- jsonProfessores[i]
+    df_professor <- extrai_1perfil(jsonProfessor)
+    if( nrow(df_saida) > 0 ) {
+      df_saida <- rbind(df_saida , df_professor)
+    } else {
+      df_saida <- df_professor 
+    }
+  }
+   
+  return(df_saida)
+}
+
+extrai_1producao <- function(professor) {
+  idLattes <- names(professor)
+  df_1producao <<- NULL 
+  producao_bibliografica <- professor[[idLattes]]$producao_bibiografica  #list
+  for( tipo_producao in names(producao_bibliografica)) { 
+    df_temporario <- cv_tplista2tpchar ( producao_bibliografica[[tipo_producao]]) 
+    df_temporario$tipo_producao <-  tipo_producao 
+    df_temporario$idLattes <-  idLattes
+    df_1producao <- concatenadf( df_1producao , df_temporario  )
+  }  
+  return(df_1producao)
+}
+
+extrai_producoes <- function( jsonProfessores) {
+  df_saida <- data.frame()
+  for( i in 1:length(jsonProfessores)) {
+    jsonProfessor <- jsonProfessores[i]
+    df_producao <- extrai_1producao(jsonProfessor)
+    if( nrow(df_saida) > 0 ) {
+      df_saida <- concatenadf(df_saida , df_producao)
+    } else {
+      df_saida <- df_producao 
+    }
+  }
+  df_saida <- df_saida %>% filter( !is.na(tipo_producao))
+  return(df_saida)  
+}
+
+extrai_1orientacao <- function(professor) {
+  idLattes <- names(professor)
+  df_1orientacao <- NULL
+  orientacoes_academicas  <- professor[[idLattes]]$orientacoes_academicas  #list
+  for( orientacao in names(orientacoes_academicas )) { 
+    df_temporario <- cv_tplista2tpchar ( orientacoes_academicas[[orientacao]])
+    df_temporario$orientacao <-  orientacao 
+    df_temporario$idLattes <-  idLattes
+    df_1orientacao <- concatenadf( df_1orientacao , df_temporario  )
+  }  
+  return(df_1orientacao) 
+}
+
+extrai_orientacoes <- function(jsonProfessores) {
+  df_saida <- data.frame()
+  for( i in 1:length(jsonProfessores)) {
+    jsonProfessor <- jsonProfessores[i]
+    df_orientacao <- extrai_1orientacao(jsonProfessor)
+    if( nrow(df_saida) > 0 ) {
+      df_saida <- concatenadf(df_saida , df_orientacao)
+    } else {
+      df_saida <- df_orientacao
+    }
+  }
+  df_saida <- df_saida %>% filter(!is.na(idLattes))
+  return(df_saida)  
+}
+
+extrai_1area_de_atuacao <- function(professor){
+  idLattes <- names(professor)
+  df_1area <-  professor[[idLattes]]$areas_de_atuacao
+  df_1area$idLattes <- idLattes
+  return(df_1area)
+}
+
+extrai_areas_atuacao <- function(jsonProfessores){
+  df_saida <- data.frame()
+  for( i in 1:length(jsonProfessores)) {
+    jsonProfessor <- jsonProfessores[i]
+    df_area_atuacao <- extrai_1area_de_atuacao(jsonProfessor)
+    if( nrow(df_saida) > 0 ) {
+      df_saida <- concatenadf(df_saida , df_area_atuacao)
+    } else {
+      df_saida <- df_area_atuacao
+    }
+  }
+  df_saida <- df_saida %>% filter( !is.na(idLattes))
+  return(df_saida)   
+}
+```
+
+
+Em seguida é feito a criação do arquivo para análise, ainda tendo como base o modelo.
+```{r}
+unb.geografia.prof.json <- read_file("data/Geografia.profile.json")
+unb.prof.df.capes <- read.csv("data/PesqPosCapes.csv", 
+                              sep = ";", header = TRUE, colClasses = "character")
+unb.geografia.prof.json <- fromJSON(unb.geografia.prof.json)
+
+unb.geografia.prof.df.professores <- extrai_perfis(unb.geografia.prof)
+
+unb.geografia.prof.df.publicacoes <- extrai_producoes(unb.geografia.prof)
+
+unb.geografia.prof.df.orientacoes <- extrai_orientacoes(unb.geografia.prof)
+
+unb.geografia.prof.df.areas.de.atuacao <- extrai_areas_atuacao(unb.geografia.prof)
+
+save(unb.geografia.prof.df.professores, unb.geografia.prof.df.publicacoes,
+     unb.geografia.prof.df.orientacoes, unb.geografia.prof.df.areas.de.atuacao, file = "dataframes.Rda")
+
+unb.geografia.prof.df <- data.frame()
+unb.geografia.prof.df <- unb.geografia.prof.df.professores %>% 
+  select(idLattes, nome, resumo_cv, senioridade) %>% 
+  left_join(
+    unb.geografia.prof.df.orientacoes %>% 
+      select(orientacao, idLattes) %>% 
+      filter(!grepl("EM_ANDAMENTO", orientacao)) %>% 
+      group_by(idLattes) %>% 
+      count(orientacao) %>% 
+      spread(key = orientacao, value = n), 
+    by = "idLattes") %>% 
+  left_join(
+    unb.geografia.prof.df.publicacoes %>% 
+      select(tipo_producao, idLattes) %>% 
+      filter(!grepl("ARTIGO_ACEITO", tipo_producao)) %>% 
+      group_by(idLattes) %>% 
+      count(tipo_producao) %>% 
+      spread(key = tipo_producao, value = n), 
+    by = "idLattes") %>% 
+  left_join(
+    unb.geografia.prof.df.areas.de.atuacao %>% 
+      select(area, idLattes) %>% 
+      group_by(idLattes) %>% 
+      summarise(n_distinct(area)), 
+    by = "idLattes") %>% 
+  left_join(
+    unb.prof.df.capes %>% 
+      select(AreaPos, idLattes) %>% 
+      group_by(idLattes) %>% 
+      summarise(n_distinct(AreaPos)), 
+    by = "idLattes")
+```
+Em seguida, pode-ser observar a construção dos dados trabalhados, por meio das funções _head_ e _glimpse_:
+
+```{r}
+glimpse(unb.geografia.prof.df)
+head(unb.geografia.prof.df, 1)
+```
 
 ## CRISP-DM Fase.Atividade 3.4 - Integração dos dados
 
@@ -676,6 +917,7 @@ Não se aplica.
 ## CRISP-DM Fase.Atividade 5.1 - Avaliação dos resultados
 
 ## CRISP-DM Fase.Atividade 5.2 - Revisão do processo
+Não se aplica.
 
 ## CRISP-DM Fase.Atividade 5.3 -  Determinação dos etapas seguintes
 
