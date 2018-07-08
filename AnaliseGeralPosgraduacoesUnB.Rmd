@@ -599,6 +599,44 @@ glimpse(unb.geografia.pub.df)
 
 ### Arquivo Orientação
 
+Agora para o arquivo de Orientações, primeiro agrupamos os dados a partir das orientações de Pós-Doutorado, Doutorado e Mestrado, assim focando apenas no programa de Pós-Graduação. assim, criamos um _data frame_ para os tipos de orientações que desejamos e outro para as orientações em si. Assim, temos o _data frame unb.geografia.adv.df_ cujo tem 13 campos para descrever as orientações e um total de 226. Já para o _data frame unb.geografia.adv.tipo.df_ temos apenas um total de 168 orientações, ou seja, das 226 orientações, apenas 168 são do programa de Pós-Graduação.
+
+```{r}
+unb.geografia.adv.tipo.df <- data.frame()
+unb.geografia.adv.df <- data.frame()
+for (i in 1:length(unb.geografia.adv[[1]]))
+    unb.geografia.adv.tipo.df <- rbind(unb.geografia.adv.tipo.df,unb.geografia.adv$ORIENTACAO_CONCLUIDA_POS_DOUTORADO[[i]])
+unb.geografia.adv.df <- rbind(unb.geografia.adv.df, unb.geografia.adv.tipo.df); unb.geografia.adv.tipo.df <- data.frame()
+for (i in 1:length(unb.geografia.adv[[1]]))
+    unb.geografia.adv.tipo.df <- rbind(unb.geografia.adv.tipo.df,unb.geografia.adv$ORIENTACAO_CONCLUIDA_DOUTORADO[[i]])
+unb.geografia.adv.df <- rbind(unb.geografia.adv.df, unb.geografia.adv.tipo.df); unb.geografia.adv.tipo.df <- data.frame()
+for (i in 1:length(unb.geografia.adv[[1]]))
+    unb.geografia.adv.tipo.df <- rbind(unb.geografia.adv.tipo.df,unb.geografia.adv$ORIENTACAO_CONCLUIDA_MESTRADO[[i]])
+unb.geografia.adv.df <- rbind(unb.geografia.adv.df, unb.geografia.adv.tipo.df)
+glimpse(unb.geografia.adv.df)
+glimpse(unb.geografia.adv.tipo.df)
+```
+
+Em seguida removemos as possíveis listas nos dados e em seguida separamos os orientadores pelo seu ID Lattes:
+
+```{r}
+unb.geografia.adv.df$nome_orientadores <- gsub("\"|c\\(|\\)", "", unb.geografia.adv.df$nome_orientadores)
+unb.geografia.adv.df$id_lattes_orientadores <- gsub("\"|c\\(|\\)", "", unb.geografia.adv.df$id_lattes_orientadores)
+unb.geografia.adv.df <- separate(unb.geografia.adv.df, nome_orientadores, into = c("ori1", "ori2"), sep = ",")
+unb.geografia.adv.df <- separate(unb.geografia.adv.df, id_lattes_orientadores, into = c("idLattes1", "idLattes2"), sep = ",")
+```
+
+Depois, vemos quantas orientações ocorreram por ano no formato de uma tabela:
+
+```{r}
+table(unb.geografia.adv.df$ano)
+```
+
+Para no fim observarmos os 20 docentes que mais orientaram ao longo dos anos em ordem decrescente:
+
+```{r}
+head(sort(table(rbind(unb.geografia.adv.df$ori1, unb.geografia.adv.df$ori2)), decreasing = TRUE), 20)
+```
 
 ## CRISP-DM Fase.Atividade 2.4 - Verificação da qualidade dos dados. 
 
