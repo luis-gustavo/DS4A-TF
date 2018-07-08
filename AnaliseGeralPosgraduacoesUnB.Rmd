@@ -169,11 +169,20 @@ _"Resultado do sonho e do trabalho de educadores como Darcy Ribeiro e Anísio Te
 
 ### Geografia
 
+A Geografia tem como objeto de estudo a superfície terrestre e seus fenômenos, bem como a relação humana com essa superfície. Dessa maneira, o geógrafo analisa a relação da população com a região que ocupa e os efeitos dessa ocupação. O Geógrafo pode seguir duas áreas com focos diferentes: a carreira acadêmica, como professores e pesquisadores; ou, uma carreira profissional, ligada a indústria.
 
+O Programa de Pós-graduação em Geografia (PPGGEA) da Universidade de Brasília (UnB) foi criado em criado em 1996, com o curso de Mestrado e, a partir de 2011, iniciou o curso de Doutorado. O objetivo central do PPGGEA é o desenvolvimento de inovações científicas na área do conhecimento da Geografia e na formação de docentes, pesquisadores e recursos humanos especializados. O PPGGEA é formado por uma área de concentração: Gestão Ambiental e Territorial e por duas linhas de pesquisas reestruturadas da seguinte forma: (1) Produção do Espaço e Território Nacional e, (2) Representação Espacial da Dinâmica Territorial e Ambiental. As linhas de pesquisa estão de acordo com a formação acadêmica do corpo docente e atendem aos objetivos propostos, abrigando alunos que possuem interesse na qualificação em Geografia e áreas afins como Arquitetura e Urbanismo, Sociologia, Planejamento Urbano e Regional, Ecologia, Geoprocessamento, Ensino de Geografia, entre outras. Nossas linhas de pesquisa têm atingido os objetivos tanto dos projetos desenvolvidos pelos professores quanto os interesses de qualificação profissional dos discentes. A proposta do curso possui como elemento estruturador fundamental os projetos de pesquisa que se articulam diretamente com a temática das disciplinas oferecidas e com os projetos de dissertação desenvolvidos pelos alunos. Isso permite que grupos de professores articulados por uma temática participem de projetos comuns, juntamente com seus grupos de orientandos, reunidos nos laboratórios (ver item infra-estrutura).
 
 ### Geociências Aplicadas e Geodinâmica
 
+O Curso de Pós-graduação em GEOCIÊNCIAS APLICADAS, criado em 2008, tem como objetivo principal impulsionar o ensino e a pesquisa das geotecnologias que nas últimas décadas consagraram-se como ferramentas de coleta, organização, análise e processamento de dados e de informações nas diferentes aéreas das ciências da terra, a fim de demonstrar e desenvolver o potencial de suas aplicações às práticas e ao conhecimento geocientífico. O uso das geotecnologias na abordagem da informação geoespacial ou geográfica foi o processo que viabilizou a integração de um maior número de elementos e dados de diferentes origens, possibilitando maior materialidade na compreensão das relações entre o espaço geográfico e os componentes e constituintes terrestres.
+O Curso de Pós-graduação em GEOCIÊNCIAS APLICADAS oferece titulação nos níveis de Mestrado e Doutorado. O Curso está estruturado em 3 (três) áreas de concentração:
 
+* Geofísica Aplicada
+* Geoprocessamento e Análise Ambiental
+* Hidrogeologia e Meio Ambiente
+
+A duração do curso de mestrado é de no mínimo 2 e no máximo 4 semestres letivos, enquanto o de doutorado abrange o mínimo de 4 e o máximo de 8 semestres regulares.
 
 ### Geologia
 
@@ -222,6 +231,7 @@ Este trabalho irá demonstrar conhecimentos de Ciência de Dados aplicados aos d
 ### Avaliação preliminar das pós-graduações na UnB
 
 #### Geografia
+
 
 
 
@@ -374,3 +384,8 @@ Todos os arquivos com dados iniciais a seguir apresentados foram fornecidos pelo
 # Referências
 
 * Fernandes, Jorge H C, Ricardo Barros Sampaio, e João Ribas de Moura. "Ciência de Dados para Todos (Data Science   For All) - 2018.1 - Análise da Produção Científica e Acadêmica da Universidade de Brasília - Modelo de Relatório Final da Disciplina - Departamento de Ciência da Computação da UnB". Disciplina 116297 - Tópicos Avançados em Computadores, turma D, do semestre 2018.1, do Departamento de Ciência da Computação do Instituto de Ciências Exatas da Universidade de Brasília, 13 de junho de 2018.
+
+* POSGEA. Apresentação, 2018. Disponíıvel em <http://www.posgea.unb.br/site/apresentacao>.
+
+* IGD. Geociências Aplicadas - Instituto de Geociências - Universidade de Brasília, 2018. Disponíıvel em <http://www.igd.unb.br/index.php?option=com_content&view=article&id=23&Itemid=136>.
+
