@@ -41,6 +41,7 @@ library(tidyr)
 library(readr)
 library(purrr)
 library(tibble)
+library(ggpubr)
 ```
 
 ## CRISP-DM
@@ -947,7 +948,33 @@ head(unb.geografia.prof.df, 1)
 
 ### Análise dos dados
 
-#### Nĩvel de internacionalização
+#### Senioridade
+Para análise da senioridade dos docentes, será feita uma correlação entre senioridade e o número de orientações concluídas.
+```{r warning=FALSE}
+plot1 <- ggplot(unb.geografia.prof.df, aes(x=senioridade, y=ORIENTACAO_CONCLUIDA_MESTRADO)) + 
+  geom_bar(stat="identity", width=.5, fill="#ADD8E6") + 
+  labs(title="Senioridade x Orientações Mestrado",  
+       caption="source: mpg") + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+
+plot2 <- ggplot(unb.geografia.prof.df, aes(x=senioridade, y=ORIENTACAO_CONCLUIDA_DOUTORADO)) + 
+  geom_bar(stat="identity", width=.5, fill="#abf069") + 
+  labs(title="Senioridade x Orientações Doutorado", 
+       caption="source: mpg") + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+
+plot3 <- ggplot(unb.geografia.prof.df, aes(x=senioridade, y=ORIENTACAO_CONCLUIDA_POS_DOUTORADO)) + 
+  geom_bar(stat="identity", width=.5, fill="#ba0e42") + 
+  labs(title="Senioridade x Orientações Pós-Doutorado", 
+       caption="source: mpg") + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
+
+ggarrange(plot1, plot2, plot3, ncol=1)
+```
+Percebe-se que existe uma relação diretamente proporcional entre a senioridade do docente e o número de orientações concluídas, visto que em todos os casos quanto maior a senioridade maior o número de orientações.
+
+
+#### Nível de internacionalização
 Para análise do nível de internacionalização das publicações referentes ao programa de pós graduação de geografia da UnB, foi gerado o seguinte gráfico, utilizando a biblioteca ggplot2.
 ```{r}
 eventos2017 <- unb.geografia.pub$EVENTO$`2017`
@@ -957,6 +984,19 @@ natureza <- eventos2017$natureza
 data <- data.frame(paises, natureza)
 ggplot(data, aes(x=paises, y="", col=paises)) + geom_point() + geom_jitter()
 ```
+
+
+#### Publicações
+Quanto a análise das publicações feitas pelos docentes, essas podem ser observadas no gráfico abaixo:
+```{r}
+names <- names(unb.geografia.pub)
+tamanhos <- sapply(unb.geografia.pub, function(x) length(x))
+data <- data.frame(names, tamanhos)
+ggplot(data, aes(x="", y=names, fill=names))+
+  geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0)
+```
+
+É evidente que no programa de pós-graduação de geografia da UnB há mais publicações de Periódicos, Texto em Jornais, Livros e em Eventos. Além disso, percebe-se que artigos aceitos é de longe a menor representação, em termos quantitativos, das publicações desse programa.
 
 ## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
 
