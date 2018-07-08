@@ -1,8 +1,8 @@
 ---
 title: Ciência de Dados para Todos (Data Science For All) - 2018.1 - Análise
   da Produção Científica e Acadêmica da Universidade de
-  Brasília - Relatório Final da Disciplina - Áreas Geografia,
-  Geociências Aplicadas e Geodinâmica e Geologia
+  Brasília - Relatório Final da Disciplina - Áreas Geografia, Geologia, 
+  Geociências Aplicadas e Geodinâmica
 date: "02/07/2018"
 output:
   pdf_document: default
@@ -29,7 +29,7 @@ Por fim, ao longo desse trabalho será demonstrado como é realizado um trabalh
 
 ## Ferramentas e Técnicas
 
-Foi utilizada a linguagem R e plataforma RStudio para a manipulação e análise dos dados, e este documento foi gerado no formato R Markdown. Foram utilizados as seguintes bibliotecas no RStudio:
+Foi utilizada a linguagem R e plataforma RStudio para a manipulação e análise dos dados, e este documento foi gerado no formato R Markdown. Foram utilizadas as seguintes bibliotecas no RStudio:
 
 ```{r library-load}
 library(jsonlite)
@@ -198,148 +198,176 @@ O Museu de Geociências é um dos principais museus da UnB. Possui acervo expres
 O Observatório Sismológico (SIS) é um Centro do Instituto de Geociências (IG) da Universidade de Brasília (UnB). Suas responsabilidades envolvem três áreas, que são: o ensino (níveis de graduação e pós-graduação), a Extensão e a Pesquisa relacionada à sismicidade e à estrutura do interior da Terra. Sua principal atividade é o monitoramento sismográfico da sismicidade brasileira, natural e induzida por reservatórios. Dispõe de sede própria com boa infraestrutura física (laboratórios de Análise de Dados e de Computação; Oficina Eletrônica, Mostra de Sismologia, Biblioteca, entre outros), instrumental (sistemas sismográficos digitais completos, analisadores de espectro, gravímetro, geradores e medidores de rádio-freqüências, geradores de função, GPS’s etc.), computacional (uma rede local com seis estações de trabalho, PC’s e periféricos), e recursos humanos (professores, técnicos-administrativos, prestadores de serviços e alunos bolsistas de
 graduação e pós-graduação).
 
-###Outros aspectos que caracterizam a produção científica e acadêmica da UnB
+### Outros aspectos que caracterizam a produção científica e acadêmica da UnB
 
 
 ## O que a Organização precisa realmente alcançar?
 
+Vários stakeholders estão envolvidos neste projeto, e poderíamos considerar cada um deles como distintas organizações que possuem interesses distintos e complementares. Elas são:
 
-##Avaliação das Circunstâncias
+* A Disciplina Ciência de Dados para Todos 2018.1, que quer comprovar que seus alunos dominam ferramentas e técnicas de ciência de dados, para fins de avaliação de rendimento da disciplina.
+* A UnB, representada pelos decanatos de pós-graduação (DPG) e de pesquisa e inovação (DPI), que querem dispor de instrumentos para realização de avaliações contínuas de suas pós-graduações.
+* O SNPG, que assim com o DPG e DPI, também pode se beneficiar do uso de instrumentos para realização de avaliações contínuas de suas pós-graduações.
+* Os interessados em melhor conhecer o que é produzido pelo Sistema Nacional de Pós-graduação, como empresas privadas, que querem desfrutar dos benefícios gerados pela  ciência brasileira.
 
+A fim de dar maior fidelidade e homogeneidade ao exercício realizado na disciplina, focaremos em atendimento aos interesses comuns das organizações DPI, DPG e CAPES, que desejam dispor de instrumentos ágeis para avaliação contínua da pós-graduação brasileira. 
 
-###Avaliação preliminar das pós-graduações na UnB
+Com base no exposto, o objetivo do trabalho final a ser alcançado pelos produtos de mineração de dados desenvolvido pelos alunos da disciplina Ciência de Dados para Todos é produzir, tomando por base inicial os dados fornecidos pelos professores responsáveis pela disciplina, ferramentas para análise e avaliação contínuas e de baixo custo, do desempenho de um conjunto de pós-graduações que estão vinculadas a uma mesma subárea ou grupo de conhecimento. Cada área de pós-graduação apresenta suas características peculiares, assim como cada um dos programas vinculados a essas áreas.
+Como já informado, características peculiares de cada programa podem ser obtidas a partir de visita ao sítio da CAPES (2018).
 
+## Avaliação das Circunstâncias
 
-###Avaliação preliminar da produção científica e acadêmica da UnB
+Este trabalho irá demonstrar conhecimentos de Ciência de Dados aplicados aos datasets com informações dos cursos das áreas de Geografia, Geologia, e Geociências, de acordo com o que foi definido pela disciplina e seus professores.
 
+### Avaliação preliminar das pós-graduações na UnB
 
-#CRISP-DM Fase 2 - Entendimento dos Dados
+### Geografia
 
 
-##CRISP-DM Fase.Atividade 2.1 - Coleta inicial dos dados
 
-###Perfil profissional dos docentes vinculados às pós-graduações
+### Geociências Aplicadas e Geodinâmica
 
 
-###Orientações de mestrado e doutorado realizadas pelos docentes vinculados às pós-graduações
 
+#### Geologia
 
+O Programa de Geologia da UnB iniciou no ano de 2012, com 18 linhas de pesquisa, e atualmente possui sete áreas de concentração:
 
-###Produção bibliográfica gerada pelos docentes vinculados às pós-graduações
+* Bioestratigrafia e Paleoecologia;
+* Geofísica Aplicada;
+* Geologia Regional;
+* Geoquímica;
+* Mineralogia e Petrologia;
+* Processamento de Dados em Geologia e Análise Ambiental;
+* Prospecção e Geologia Econômica.
 
+De acordo com a Avaliação Trienal do programa, o corpo docente do Programa é bem qualificado, mesclando docentes experientes com mais de 10 anos de titulação máxima e jovens doutores com formação diversificada em vários centros nacionais e internacionais, o que permite cobrir com qualidade todas as áreas de pesquisa e formação em desenvolvimento.
 
-###Agrupamento dos docentes conforme áreas de atuação
+O corpo discente que participa do Programa atinge, em média, 104 alunos por ano durante o triênio, sendo em sua maioria estudantes de mestrado. As teses e dissertações possuem qualidade inequívoca, o que é atestado pela publicação de seus resultados em periódicos de ampla circulação, inclusive em periódicos internacionais de nível elevado.
 
-###Redes de colaboração entre docentes
+O Programa de Geologia da UnB é dos mais tradicionais e qualificados da área, constituindo um pólo de conhecimentos com forte inserção regional e nacional. A infra-estrutura analítica, em particular o Laboratório de Geologia Isotópica e o Laboratório de Microssonda Eletrônica vem servindo a várias instituições e centros de pesquisa nacionais. Vários docentes são colaboradores em outros programas da área, entre outros UFMT e UFC, atuando em cooperações do tipo Procad e Casadinho. Adicionalmente, o Programa coordena um projeto Pronex e um projeto MCT/CNPq/Instituto Nacional de Ciência e Tecnologia.
 
 
-##CRISP-DM Fase.Atividade 2.2 - Descrição dos Dados
+### Avaliação preliminar da produção científica e acadêmica da UnB
 
-Para leitura e manipulação dos dados utilizados, serão utilizadas primordialmente as cinco bibliotecas a seguir
 
-```{r library-load}
-library(jsonlite)
-library(listviewer)
-library(readxl)
-library(ggplot2)
-library(tidyverse)
-```
+# CRISP-DM Fase 2 - Entendimento dos Dados
 
 
-###Descri????o dos dados do perfil
+## CRISP-DM Fase.Atividade 2.1 - Coleta inicial dos dados
 
+### Perfil profissional dos docentes vinculados às pós-graduações
 
-####Potencial de utiliza????o dos dados do perfil dos docentes
 
+### Orientações de mestrado e doutorado realizadas pelos docentes vinculados às pós-graduações
 
 
 
-###Descri????o dos dados de orienta????es
+### Produção bibliográfica gerada pelos docentes vinculados às pós-graduações
 
 
-###Descri????o dos dados de produ????o bibliogr??fica
+### Agrupamento dos docentes conforme áreas de atuação
 
+### Redes de colaboração entre docentes
 
-###Descri????o dos dados de agrega????o de docentes por ??rea
 
+## CRISP-DM Fase.Atividade 2.2 - Descrição dos Dados
 
-###Descri????o dos dados de redes de colabora????o
 
+### Descrição dos dados do perfil
 
-##CRISP-DM Fase.Atividade 2.3 - An??lise explorat??ria dos dados
 
+#### Potencial de utilização dos dados do perfil dos docentes
 
-###Arquivo Profile
 
-###Arquivo Publica????o
 
-###Arquivo Orienta????o
 
+### Descrição dos dados de orientações
 
-##CRISP-DM Fase.Atividade 2.4 - Verifica????o da qualidade dos dados. 
 
+### Descrição dos dados de produção bibliográfica
 
-#CRISP-DM Fase 3 -  __Prepara????o dos Dados__
 
+### Descrição dos dados de agregação de docentes por área
 
-##CRISP-DM Fase.Atividade 3.1 - Sele????o dos dados. 
 
+### Descrição dos dados de redes de colaboração
 
-##CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
 
-##CRISP-DM Fase.Atividade 3.3 - Constru????o dos dados
+## CRISP-DM Fase.Atividade 2.3 - Análise exploratória dos dados
 
 
-##CRISP-DM Fase.Atividade 3.4 - Integra????o dos dados
+### Arquivo Profile
 
+### Arquivo Publicação
 
-##CRISP-DM Fase.Atividade 3.5 -  Formata????o dos dados
+### Arquivo Orientação
 
 
-#CRISP-DM Fase 4 - __Modelagem__
+## CRISP-DM Fase.Atividade 2.4 - Verificação da qualidade dos dados. 
 
 
-##CRISP-DM Fase.Atividade 4.1 - Sele????o das t??cnicas de modelagem
+# CRISP-DM Fase 3 - __Preparação dos Dados__
 
-##CRISP-DM Fase.Atividade 4.2 -  Realiza????o de testes de modelagem
 
+## CRISP-DM Fase.Atividade 3.1 - Seleção dos dados. 
 
-##CRISP-DM Fase.Atividade 4.3 -  Constru????o do modelo definitivo
 
+## CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
 
-##CRISP-DM Fase.Atividade 4.4 - Avalia????o do modelo
+## CRISP-DM Fase.Atividade 3.3 - Construção dos dados
 
-#CRISP-DM Fase 5 - __Avalia????o__
 
+## CRISP-DM Fase.Atividade 3.4 - Integração dos dados
 
-##CRISP-DM Fase.Atividade 5.1 - Avalia????o dos resultados
 
-##CRISP-DM Fase.Atividade 5.2 - Revis??o do processo
+## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
 
 
-##CRISP-DM Fase.Atividade 5.3 -  Determina????o dos etapas seguintes
+# CRISP-DM Fase 4 - __Modelagem__
 
 
-#CRISP-DM Fase 6 - __Implanta????o__ (_deployment_)
+## CRISP-DM Fase.Atividade 4.1 - Seleção das técnicas de modelagem
 
-##CRISP-DM Fase.Atividade 6.1 -  Planejamento da transi????o 
+## CRISP-DM Fase.Atividade 4.2 -  Realização de testes de modelagem
 
 
-##CRISP-DM Fase.Atividade 6.2 -  Planejamento do monitoramento dos produtos 
+## CRISP-DM Fase.Atividade 4.3 -  Construção do modelo definitivo
 
 
-##CRISP-DM Fase.Atividade 6.3 -  Planejamento de manute????o 
+## CRISP-DM Fase.Atividade 4.4 - Avaliação do modelo
 
+# CRISP-DM Fase 5 - __Avaliação__
 
-##CRISP-DM Fase.Atividade 6.4 -  Produ????o do relat??rio final
 
+## CRISP-DM Fase.Atividade 5.1 - Avaliação dos resultados
 
-##CRISP-DM Fase.Atividade 6.5 -  Apresenta????o do relat??rio final
+## CRISP-DM Fase.Atividade 5.2 - Revisão do processo
 
 
-##CRISP-DM Fase.Atividade 6.6 -  Revis??o sobre a execu????o do projeto
+## CRISP-DM Fase.Atividade 5.3 -  Determinação dos etapas seguintes
 
 
-# Refer??ncias
+# CRISP-DM Fase 6 - __Implantação__ (_deployment_)
 
-* Fernandes, Jorge H C, Ricardo Barros Sampaio, e Jo??o Ribas de Moura. "Ci??ncia de Dados para Todos (Data Science   For All) - 2018.1 - An??lise da Produ????o Cient??fica e Acad??mica da Universidade de Bras??lia - Modelo de Relat??rio Final da Disciplina - Departamento de Ci??ncia da Computa????o da UnB". Disciplina 116297 - T??picos Avan??ados em Computadores, turma D, do semestre 2018.1, do Departamento de Ci??ncia da Computa????o do Instituto de Ci??ncias Exatas da Universidade de Bras??lia, 13 de junho de 2018.
+## CRISP-DM Fase.Atividade 6.1 -  Planejamento da transição 
+
+
+## CRISP-DM Fase.Atividade 6.2 -  Planejamento do monitoramento dos produtos 
+
+
+## CRISP-DM Fase.Atividade 6.3 -  Planejamento de manutenção
+
+
+## CRISP-DM Fase.Atividade 6.4 -  Produção do relatório final
+
+
+## CRISP-DM Fase.Atividade 6.5 -  Apresentação do relatório final
+
+
+## CRISP-DM Fase.Atividade 6.6 -  Revisão sobre a execução do projeto
+
+
+# Referências
+
+* Fernandes, Jorge H C, Ricardo Barros Sampaio, e João Ribas de Moura. "Ciência de Dados para Todos (Data Science   For All) - 2018.1 - Análise da Produção Científica e Acadêmica da Universidade de Brasília - Modelo de Relatório Final da Disciplina - Departamento de Ciência da Computação da UnB". Disciplina 116297 - Tópicos Avançados em Computadores, turma D, do semestre 2018.1, do Departamento de Ciência da Computação do Instituto de Ciências Exatas da Universidade de Brasília, 13 de junho de 2018.
