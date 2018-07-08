@@ -5,11 +5,11 @@ title: Ciência de Dados para Todos (Data Science For All) - 2018.1 - Análise
   Geociências Aplicadas e Geodinâmica
 date: "02/07/2018"
 output:
-  pdf_document: default
-  word_document: default
   html_document:
     df_print: paged
-authors: Diogo Luís Teixeira de Macedo Sampaio, Ricardo Souza Rachaus e Luis Gustavo Avelino de Lima Jacinto
+  word_document: default
+  pdf_document: default
+authors: Diogo Luís Teixeira de Macedo Sampaio, Luis Gustavo Avelino de Lima Jacinto,Ricardo Souza Rachaus
 ---
 
 ```{r setup, include=FALSE}
@@ -169,6 +169,59 @@ _"Resultado do sonho e do trabalho de educadores como Darcy Ribeiro e Anísio Te
 
 ### Geografia
 
+O Programa de Pós-graduação em Geografia(PPGGEA) da Universidade de Brasília(UnB) foi criado em 1996 já com o curso de mestrado, e a partir de 2011
+inicio o curso de Doutorado.
+
+De acordo com o programa, seu principal central é o desenvolvimento de inovações
+científicas na área do conhecimento da Geografia e na formação de docentes,
+pesquisadores e recursos humanos especializados.
+O portal do programa pode ser acessado pela URL http://www.posgea.unb.br/.
+
+O PPGGEA conta com diversos laboratórios nas subáreas de Geografia. São esses:
+
+* Centro de Cartografia Aplicada e Informação Geográfica (CIGA):
+O CIGA tem uma estrutura física organizada com equipamentos básicos para o desenvolvimento de atividades direcionadas ao manuseio de ferramentas geográficas voltadas para a educação geográfica e o planejamento e gestão do território.
+
+* Centro de Documentação Geográfica – Milton Santos (CDG):
+Este espaço é destinado para os alunos de pós-graduação do GEA.
+
+* Laboratório de Cartografia e Fotointerpretação:
+O laboratório é equipado com mapoteca, fotografias aéreas em diversas escalas, retroprojetor, estereoscópicos de bolso e de espelho e mesas para trabalhos cartográficos. Consta ainda de um acervo de cartas sistemáticas de suporte aos projetos desenvolvidos no GEA por professores e estudantes (Graduação e Pós-Graduação)
+
+* Laboratório de Geografia Física(LAGEF):
+LAGEF desenvolve pesquisas em Geomorfologia, pedologia, educação ambiental, ensino de Geografia, biogeografia e gestão ambiental. Apóia atividades de pesquisa com a participação dos alunos de graduação de pós-graduação. O laboratório abriga os projetos de pesquisa desenvolvidos pelos alunos do PIBIC/ Cnpq (Programa Institucional de Bolsas de Iniciação Científica/ DPP/UnB).
+
+* Laboratório de Geoiconografia e Multimídias (LAGIM):
+Um dos focos prioritários do LAGIM é o de aproximar-se dos demais laboratórios aqui já lotados e lhes propor ações conjuntas.
+
+* Laboratório de Sistemas de Informações Espaciais (LSIE):
+O LSIE é um espaço programado para desenvolver atividades de pesquisa com alunos da Graduação e Pós-Graduação do Departamento de Geografia, assim como outros departamentos de áreas afins da Universidade. O LSIE desenvolve atividades de pesquisa e extensão no campo da geomática, com o propósito de integrar, adquirir e gerenciar dados e/ou informações espaciais. O laboratório trabalha em projetos com os diferentes órgãos e instituições que visam o desenvolvimento sustentado do meio ambiente.
+
+* Laboratório de Análises Territoriais (LATER):
+Os principais objetivos do LATER são os seguintes: Organizar grupos de pesquisa temáticos para potencializar esforços e estreitar os laços entre docentes, alunos e participantes diversos; Fortalecer um espaço para debates em interação com a graduação; Organizar os projetos em grupos para discussões, trabalhos, pesquisas e orientações e torná-los mais produtivos. Os trabalhos desenvolvidos no laboratório congregam alunos de graduação, pós-graduação e professores, proporcionando suporte teórico e metodológico para a elaboração dos trabalhos científicos no âmbito territorial, cujos produtos foram publicações em revistas, seminários e eventos de vários tipos.
+
+* Laboratório de Climatologia Geográfica (LCGea):
+O objetivo deste laboratório é ampliar e difundir os conhecimentos teóricos e práticos da Climatologia Geográfica Brasileira; ampliar os estudos de clima do Distrito Federal; estreitar laços com a sociedade civil e ampliar as relações profissionais visando a solução de problemas da comunidade; e- fornecer subsídios técnicos para o planejamento e a gestão do território.
+
+* Laboratório de Geografia, Ambiente e Saúde (LAGAS):
+O LAGAS tem como objetivo principal proporcionar um espaço para discussões e apoio para elaboração e desenvolvimento de projetos de pesquisa e extensão que englobam uma abordagem integrada entre a análise geográfica das questões de saúde, meio ambiente e novas metodologias baseadas em geotecnologias, a fim de ampliar o conhecimento científico sobre esses temas e apoiar a formação de profissionais nessa área.
+
+É possível ver o histórico do programa, tendo este atualmente 26 integrantes
+participantes no corpo docente, sendo possível observar também seus artigos por
+triênio(13-14-15-16). Também é possível observar as informações do corpo discente,
+que divido em mestrado e doutorado tem, respectivamente, 70 e 126 integrantes.
+
+Esse programa é formado por uma área de concentração: Gestão Ambiental e
+territorial e duas linhas de pesquisa reestruturadas da seguinte forma:
+
+1. Produção do Espaço e Território Nacional
+2. Representação Espacial da Dinâmica Territorial e Ambiental
+
+As linhas de pesquisa do programa estão de acordo com a formação acadêmica do
+corpo docente e visam atender aos objetivos estipulados, abrigando alunos que
+possuem interesse na qualificação em Geografia e outras áreas relacionadas como
+Arquitetura e Urbanismo, Sociologia, Planejamento Urbano e Regional, Ecologia,
+Geoprocessamento, Ensino de Geografia, entre outras.
 
 
 ### Geociências Aplicadas e Geodinâmica
