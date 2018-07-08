@@ -910,6 +910,7 @@ head(unb.geografia.prof.df, 1)
 
 ## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
 
+Quanto a formatação dos dados, não houve necessidade de ser feita pelos integrantes do grupo, pois ao longo da seleção até a integração dos dados foi visado a formatação, de forma que não houvesse necessidade de integração posterior.
 
 # CRISP-DM Fase 4 - __Modelagem__
 
@@ -931,10 +932,14 @@ Não se aplica.
 
 ## CRISP-DM Fase.Atividade 5.1 - Avaliação dos resultados
 
+Após o tratamento dos dados, as análises demonstraram que houve um crescimento ao longo dos anos da atividade da Pós-Graduação nas áreas de Geografia, Geociências Aplicadas e Geodinâmica, e, Geologia. Isso era esperado considerando que ao decorrer da existência do programa mais pessoas estaram interessadas e haverá uma melhoria na qualidade dos cursos oferecidos.
+
 ## CRISP-DM Fase.Atividade 5.2 - Revisão do processo
 Não se aplica.
 
 ## CRISP-DM Fase.Atividade 5.3 -  Determinação dos etapas seguintes
+
+Para continuação do trabalho, os próximos passos seriam de selecionar uma técnica de modelagem para aplicar aos dados, realizando testes até a obtenção do modelo definitivo, cujo conteria a análise desejada. Ou seja, a seção 4 antes prevista no trabalho. Quanto ao modelo aplicado e como trabalhar nele ainda não foi definido e/ou pensado, portanto é deixado aqui em aberto para uma avaliação futura.
 
 # CRISP-DM Fase 6 - __Implantação__ (_deployment_)
 
