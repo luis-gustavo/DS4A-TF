@@ -397,13 +397,13 @@ O arquivo `r json.geologia.researchers_by_area` apresenta as vinculações de to
 file.info('data/Geografia.graph.json')
 ```
 
-O arquivo `rdata/Geografia.graph.json` apresenta redes de colaboração na co-autoria de artigos cientpificos, feitas entre os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
+O arquivo `rdata/Geografia.graph.json` apresenta redes de colaboração na co-autoria de artigos científicos, feitas entre os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
 
 ```{r}
 file.info('data/geologia.graph.json')
 ```
 
-O arquivo `rdata/geologia.graph.json` apresenta redes de colaboração na co-autoria de artigos cientpificos, feitas entre os docentes vinculados a programas de pós-graduação de Geologia da UnB, entre 2010 e 2017.
+O arquivo `rdata/geologia.graph.json` apresenta redes de colaboração na co-autoria de artigos científicos, feitas entre os docentes vinculados a programas de pós-graduação de Geologia da UnB, entre 2010 e 2017.
 
 ## CRISP-DM Fase.Atividade 2.2 - Descrição dos Dados
 
@@ -417,6 +417,7 @@ unb.geografia.prof <- fromJSON("data/Geografia.profile.json")
 ```
 
 A quantidade de docentes de Geografia sob análise é apresentada a seguir.
+
 ```{r}
 length(unb.geografia.prof)
 ```
