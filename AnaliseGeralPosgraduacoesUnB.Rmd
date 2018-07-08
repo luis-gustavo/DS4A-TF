@@ -180,19 +180,19 @@ O portal do programa pode ser acessado pela URL http://www.posgea.unb.br/.
 O PPGGEA conta com diversos laboratórios nas subáreas de Geografia. São esses:
 
 * Centro de Cartografia Aplicada e Informação Geográfica (CIGA):
-O CIGA tem uma estrutura física organizada com equipamentos básicos para o desenvolvimento de atividades direcionadas ao manuseio de ferramentas geográficas voltadas para a educação geográfica e o planejamento e gestão do território.
+Conta estrutura física organizada com equipamentos básicos para o desenvolvimento de atividades direcionadas ao manuseio de ferramentas geográficas voltadas para a educação geográfica e o planejamento e gestão do território.
 
 * Centro de Documentação Geográfica – Milton Santos (CDG):
-Este espaço é destinado para os alunos de pós-graduação do GEA.
+Espaço é destinado para os alunos de pós-graduação do GEA.
 
 * Laboratório de Cartografia e Fotointerpretação:
-O laboratório é equipado com mapoteca, fotografias aéreas em diversas escalas, retroprojetor, estereoscópicos de bolso e de espelho e mesas para trabalhos cartográficos. Consta ainda de um acervo de cartas sistemáticas de suporte aos projetos desenvolvidos no GEA por professores e estudantes (Graduação e Pós-Graduação)
+Laboratório equipado com mapoteca, fotografias aéreas em diversas escalas, retroprojetor, estereoscópicos de bolso e de espelho e mesas para trabalhos cartográficos. Consta ainda de um acervo de cartas sistemáticas de suporte aos projetos desenvolvidos no GEA por professores e estudantes (Graduação e Pós-Graduação)
 
 * Laboratório de Geografia Física(LAGEF):
 LAGEF desenvolve pesquisas em Geomorfologia, pedologia, educação ambiental, ensino de Geografia, biogeografia e gestão ambiental. Apóia atividades de pesquisa com a participação dos alunos de graduação de pós-graduação. O laboratório abriga os projetos de pesquisa desenvolvidos pelos alunos do PIBIC/ Cnpq (Programa Institucional de Bolsas de Iniciação Científica/ DPP/UnB).
 
 * Laboratório de Geoiconografia e Multimídias (LAGIM):
-Um dos focos prioritários do LAGIM é o de aproximar-se dos demais laboratórios aqui já lotados e lhes propor ações conjuntas.
+Um dos focos prioritários do LAGIM é o de aproximar-se dos demais laboratórios e lhes propor ações conjuntas.
 
 * Laboratório de Sistemas de Informações Espaciais (LSIE):
 O LSIE é um espaço programado para desenvolver atividades de pesquisa com alunos da Graduação e Pós-Graduação do Departamento de Geografia, assim como outros departamentos de áreas afins da Universidade. O LSIE desenvolve atividades de pesquisa e extensão no campo da geomática, com o propósito de integrar, adquirir e gerenciar dados e/ou informações espaciais. O laboratório trabalha em projetos com os diferentes órgãos e instituições que visam o desenvolvimento sustentado do meio ambiente.
@@ -206,23 +206,7 @@ O objetivo deste laboratório é ampliar e difundir os conhecimentos teóricos e
 * Laboratório de Geografia, Ambiente e Saúde (LAGAS):
 O LAGAS tem como objetivo principal proporcionar um espaço para discussões e apoio para elaboração e desenvolvimento de projetos de pesquisa e extensão que englobam uma abordagem integrada entre a análise geográfica das questões de saúde, meio ambiente e novas metodologias baseadas em geotecnologias, a fim de ampliar o conhecimento científico sobre esses temas e apoiar a formação de profissionais nessa área.
 
-É possível ver o histórico do programa, tendo este atualmente 26 integrantes
-participantes no corpo docente, sendo possível observar também seus artigos por
-triênio(13-14-15-16). Também é possível observar as informações do corpo discente,
-que divido em mestrado e doutorado tem, respectivamente, 70 e 126 integrantes.
-
-Esse programa é formado por uma área de concentração: Gestão Ambiental e
-territorial e duas linhas de pesquisa reestruturadas da seguinte forma:
-
-1. Produção do Espaço e Território Nacional
-2. Representação Espacial da Dinâmica Territorial e Ambiental
-
-As linhas de pesquisa do programa estão de acordo com a formação acadêmica do
-corpo docente e visam atender aos objetivos estipulados, abrigando alunos que
-possuem interesse na qualificação em Geografia e outras áreas relacionadas como
-Arquitetura e Urbanismo, Sociologia, Planejamento Urbano e Regional, Ecologia,
-Geoprocessamento, Ensino de Geografia, entre outras.
-
+Segundo dados do portal do PPGGEA, constam 359 registros de teses e dissertações vinculados a esse programa de pós graduação.
 
 ### Geociências Aplicadas e Geodinâmica
 
@@ -276,7 +260,22 @@ Este trabalho irá demonstrar conhecimentos de Ciência de Dados aplicados aos d
 
 #### Geografia
 
+Esse programa histórico do programa, tem atualmente 26 integrantes
+participantes no corpo docente. O corpo discente, que divido em mestrado e doutorado tem, respectivamente, 70 e 126 integrantes.
 
+Esse programa é formado por uma área de concentração: Gestão Ambiental e
+territorial e duas linhas de pesquisa reestruturadas da seguinte forma:
+
+1. Produção do Espaço e Território Nacional
+2. Representação Espacial da Dinâmica Territorial e Ambiental
+
+As linhas de pesquisa do programa estão de acordo com a formação acadêmica do
+corpo docente e visam atender aos objetivos estipulados, abrigando alunos que
+possuem interesse na qualificação em Geografia e outras áreas relacionadas como
+Arquitetura e Urbanismo, Sociologia, Planejamento Urbano e Regional, Ecologia,
+Geoprocessamento, Ensino de Geografia, entre outras.
+
+As linhas desse programa pesquisa contemplam objetivos dos projetos desenvolvidos e professores e também os interesses de qualificação profissional dos discentes. De acordo com o portal, a proposta do curso possui como elemento estruturador fundamental os projetos de pesquisa que se articulam diretamente com a temática das disciplinas oferecidas e com os projetos de dissertação desenvolvidos pelos alunos. Isso permite que grupos de professores articulados por uma temática participem de projetos comuns, juntamente com seus grupos de orientandos, reunidos nos laboratórios.
 
 #### Geociências Aplicadas e Geodinâmica
 
