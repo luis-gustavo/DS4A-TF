@@ -909,10 +909,10 @@ Não se aplica.
 ## CRISP-DM Fase.Atividade 4.2 -  Realização de testes de modelagem
 Não se aplica.
 
-#### CRISP-DM Fase.Atividade 4.3 -  Construção do modelo definitivo
+## CRISP-DM Fase.Atividade 4.3 -  Construção do modelo definitivo
 Não se aplica.
 
-#### CRISP-DM Fase.Atividade 4.4 - Avaliação do modelo
+## CRISP-DM Fase.Atividade 4.4 - Avaliação do modelo
 Não se aplica.
 
 # CRISP-DM Fase 5 - __Avaliação__
