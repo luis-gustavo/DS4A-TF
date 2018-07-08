@@ -221,11 +221,11 @@ Este trabalho irá demonstrar conhecimentos de Ciência de Dados aplicados aos d
 
 ### Avaliação preliminar das pós-graduações na UnB
 
-### Geografia
+#### Geografia
 
 
 
-### Geociências Aplicadas e Geodinâmica
+#### Geociências Aplicadas e Geodinâmica
 
 
 
@@ -251,10 +251,13 @@ O Programa de Geologia da UnB é dos mais tradicionais e qualificados da área, 
 ### Avaliação preliminar da produção científica e acadêmica da UnB
 
 
+
 # CRISP-DM Fase 2 - Entendimento dos Dados
 
-
 ## CRISP-DM Fase.Atividade 2.1 - Coleta inicial dos dados
+
+Todos os arquivos com dados iniciais a seguir apresentados foram fornecidos pelos professores responsáveis pela disciplina. Os dados foram gerados no mês de maio de 2018, e compilam informações entre os anos de 2010 e 2017. Os arquivos estão no formato JSON, e seus atributos iniciais e conteúdos são apresentados a seguir.
+
 
 ### Perfil profissional dos docentes vinculados às pós-graduações
 
