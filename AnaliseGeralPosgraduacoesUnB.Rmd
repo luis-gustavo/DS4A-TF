@@ -312,19 +312,46 @@ Todos os arquivos com dados iniciais a seguir apresentados foram fornecidos pelo
 
 
 ### Perfil profissional dos docentes vinculados às pós-graduações
+```{r}
+json.geografia.perfil <- 'data/Geografia.profile.json'
+file.info(json.geografia.perfil)
+```
 
+O arquivo `r json.geografia.perfil` apresenta dados sobre o perfil de todos os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
 
 ### Orientações de mestrado e doutorado realizadas pelos docentes vinculados às pós-graduações
 
+```{r}
+json.geografia.advise <- "data/Geografia.advise.json"
+file.info(json.geografia.advise)
+```
 
+O arquivo `r json.geografia.advise` apresenta dados sobre o orientações de mestrado e doutorado feitas por todos os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
 
 ### Produção bibliográfica gerada pelos docentes vinculados às pós-graduações
 
+```{r}
+json.geografia.producao.bibliografica <- "data/Geografia.publication.json"
+file.info(json.geografia.producao.bibliografica) 
+```
+
+O arquivo `r json.geografia.producao.bibliografica` apresenta dados sobre a produção bibliográfica gerada por todos os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017. 
 
 ### Agrupamento dos docentes conforme áreas de atuação
 
-### Redes de colaboração entre docentes
+```{r}
+json.geografia.researchers_by_area <- "data/Geografia.researchers_by_area.json" 
+file.info(json.geografia.researchers_by_area)
+```
 
+O arquivo `r json.geografia.researchers_by_area` apresenta as vinculações de todos os docentes de Geografia que declararam atuar em cada uma das áreas de pós-graduação do Sistema Nacional de Pós-Graduação da CAPES, conforme apresenta-se registrada essa informação no currículo Lattes de cada um, em data recente
+
+### Redes de colaboração entre docentes
+```{r}
+file.info('data/Geografia.graph.json')
+```
+
+O arquivo `rdata/Geografia.graph.json` apresenta redes de colaboração na co-autoria de artigos cientpificos, feitas entre os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
 
 ## CRISP-DM Fase.Atividade 2.2 - Descrição dos Dados
 
