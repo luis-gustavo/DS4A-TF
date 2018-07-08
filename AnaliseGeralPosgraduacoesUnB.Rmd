@@ -486,8 +486,95 @@ unb.geografia.area.df[]
 
 ## CRISP-DM Fase.Atividade 2.3 - Análise exploratória dos dados
 
+Análise exploratória dos dados possibilita um entendimento mais profundo da relação
+estatística existente entre os dados dos datasets para um melhor entendimento da qualidade daqueles dados para os objetivos do projeto. Abaixo serão feitas as análises relacionadas a cada _dataset_ utilizado nesse projeto.
 
 ### Arquivo Profile
+
+Agora trabalharemos novamente com o _dataset_ de profile para conseguir compreensão mais a fundo desses dados. Primeiramente explorando a quantidade de áreas de atuação da geografia. 
+
+```{r}
+sum(sapply(unb.geografia.prof, function(x) nrow(x$areas_de_atuacao)))
+```
+
+Em seguida, explorando a quantidade de pessoas por área de atuação, grande área e pessoas que produziram os específicos tipos de produção
+```{r}
+table(unlist(sapply(unb.geografia.prof, function(x) nrow(x$areas_de_atuacao))))
+
+table(unlist(sapply(unb.geografia.prof, function(x) (x$areas_de_atuacao$grande_area))))
+
+table(unlist(sapply(unb.geografia.prof, function(x) names(x$producao_bibiografica))))
+```
+Percebe-se que a maior parte dos docentes atuam na área de Ciência Humanas, que é o contexto da Geografia, e maior parte das suas produções bibliogrãficas estão nas áreas de **Periódico**, **Evento** e **Capítulo de Livro**, respectivamente.
+
+Em seguida, exploramos o número de publicações de cada tipo seguinte:
+
+* Artigo aceito
+* Capítulo de livro
+* Periodico
+* Texto em jornais
+
+```{r}
+sum(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$ARTIGO_ACEITO$ano)))
+sum(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$CAPITULO_DE_LIVRO$ano)))
+sum(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$LIVRO$ano)))
+sum(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$PERIODICO$ano)))
+sum(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$TEXTO_EM_JORNAIS$ano)))
+```
+
+E também o número de pessoas por quantitativo de produções por pessoa:
+```{r}
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$ARTIGO_ACEITO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$CAPITULO_DE_LIVRO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$LIVRO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$PERIODICO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$producao_bibiografica$TEXTO_EM_JORNAIS$ano))))
+```
+
+Novamente é possível observar a predominância nas quantidades referentes a Perídodicos e Capítulo de Livros quando comparado aos demais.
+
+
+Agora, exploraremos a quantidade referente ao número de produções feitas por ano de cada um dos tipos supracitados
+```{r}
+table(unlist(sapply(unb.geografia.prof, function(x) (x$producao_bibiografica$ARTIGO_ACEITO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) (x$producao_bibiografica$CAPITULO_DE_LIVRO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) (x$producao_bibiografica$LIVRO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) (x$producao_bibiografica$PERIODICO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) (x$producao_bibiografica$TEXTO_EM_JORNAIS$ano))))
+```
+De maneira geral, percebe-se que o número de produções diminuiu drasticamente de 2010 até 2017, principalmente de Textos em jornais e Periódicos.
+
+
+Agora, vamos abordar o número de pessoas que realizaram diferentes tipo de orientações, para os seguintes tipos:
+
+* Orientação concluída de mestrado
+* Orientação concluída de doutorado
+* Orientação concluída de pós-doutorado
+```{r}
+length(unlist(sapply(unb.geografia.prof, function(x) names(x$orientacoes_academicas))))
+
+table(unlist(sapply(unb.geografia.prof, function(x) names(x$orientacoes_academicas))))
+
+sum(sapply(unb.geografia.prof, function(x) length(x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_MESTRADO$ano)))
+sum(sapply(unb.geografia.prof, function(x) length(x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_DOUTORADO$ano)))
+sum(sapply(unb.geografia.prof, function(x) length(x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_POS_DOUTORADO$ano)))
+```
+
+Em seguida, a número de pessoas por quantitativo de orientações por pessoa:
+```{r}
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_MESTRADO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_DOUTORADO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) length(x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_POS_DOUTORADO$ano))))
+```
+
+Por fim, a quantidade de orientações a cada ano:
+```{r}
+table(unlist(sapply(unb.geografia.prof, function(x) (x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_MESTRADO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) (x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_DOUTORADO$ano))))
+table(unlist(sapply(unb.geografia.prof, function(x) (x$orientacoes_academicas$ORIENTACAO_CONCLUIDA_POS_DOUTORADO$ano))))
+```
+
+Em contrapartida a quantidade de produção bibliográfica, o número de orientações a cada ano, de modo geral, cresceu consideravelmente de 2010 até 2017.
 
 ### Arquivo Publicação
 
@@ -540,9 +627,7 @@ glimpse(unb.geografia.pub.df)
 
 ## CRISP-DM Fase.Atividade 4.2 -  Realização de testes de modelagem
 
-
 ## CRISP-DM Fase.Atividade 4.3 -  Construção do modelo definitivo
-
 
 ## CRISP-DM Fase.Atividade 4.4 - Avaliação do modelo
 
@@ -553,9 +638,7 @@ glimpse(unb.geografia.pub.df)
 
 ## CRISP-DM Fase.Atividade 5.2 - Revisão do processo
 
-
 ## CRISP-DM Fase.Atividade 5.3 -  Determinação dos etapas seguintes
-
 
 # CRISP-DM Fase 6 - __Implantação__ (_deployment_)
 
