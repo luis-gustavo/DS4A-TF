@@ -374,6 +374,36 @@ O arquivo `rdata/Geografia.graph.json` apresenta redes de colaboração na co-au
 
 ### Descrição dos dados do perfil
 
+O arquivo Geografia.profile.json, contém dados que caracterizam o perfil profissional de cada um dos docentes do grupo sob análise. Esse arquivo pode ser lido através do seguinte comando, da biblioteca _jsonlite_.
+
+```{r}
+unb.geografia.prof <- fromJSON("data/Geografia.profile.json")
+```
+
+A quantidade de docentes de Geografia sob análise é apresentada a seguir.
+```{r}
+length(unb.geografia.prof)
+```
+
+Através do comando _names()_ pode ser obtido uma ideia sobre as principais informações que podem ser obtidas de cada docente. Como pode-se observar abaixo essas informações são divididas em sete áreas principais.
+```{r}
+names(unb.geografia.prof[[1]])
+```
+
+Ainda com o intuito de obter uma análise inicial dos dados contidos nos perfis dos docentes, pode-se usar a função _glimpse()_,  que apresenta os atributos típicos
+que podem ser obtidos relativamente a um pesquisador específico.
+
+```{r}
+glimpse(unb.geografia.prof[[1]], width = 30)
+```
+
+Observando os atributos do pesquisador em análise, pode-se perceber que:
+
+* É uma pesquisadora que formada em Geografia.
+* Trabalha no departamento de Geografia.
+* Possui um capítulo de livro publicado no ano de 2011.
+* Possui cinco orientação de doutorado em andamento, uma destas iniciada em 2014.
+* Possui senioridade 8.
 
 #### Potencial de utilização dos dados do perfil dos docentes
 
@@ -382,8 +412,49 @@ O arquivo `rdata/Geografia.graph.json` apresenta redes de colaboração na co-au
 
 ### Descrição dos dados de orientações
 
+Assim como no _dataset_ de perfis, a leitura será feita através da biblioteca jsonlite.
+
+```{r}
+unb.geografia.adv <- fromJSON("data/Geografia.advise.json")
+```
+
+Para maior entendimento dos dados contidos nesse _dataset_ serão utilizados os seguintes métodos.
+
+```{r}
+names(unb.geografia.adv)
+names(unb.geografia.adv$ORIENTACAO_CONCLUIDA_DOUTORADO)
+```
+
+Percebe-se que as orientações se subdividem em quatro principais áreas e, dentre cada ma delas, variam entre os anos de 2010 até 2017.
+
+
+Explorando os dados de orientações concluídas de mestrado e doutorados, no ano de 2017, percebe-se que existem 14 e 17 orientações, respectivamente. Dentre as de mestrado apenas uma não era do curso de geografia. E dentre as de doutorado, apenas duas não são do curso de geografia.
+```{r}
+length(unb.geografia.adv$ORIENTACAO_CONCLUIDA_DOUTORADO$`2017`$natureza)
+```
+
+```{r}
+sort(table(unb.geografia.adv$ORIENTACAO_CONCLUIDA_DOUTORADO$`2017`$curso), decreasing = TRUE)
+```
+
+```{r}
+length(unb.geografia.adv$ORIENTACAO_CONCLUIDA_MESTRADO$`2017`$natureza)
+```
+
+```{r}
+sort(table(unb.geografia.adv$ORIENTACAO_CONCLUIDA_MESTRADO$`2017`$curso), decreasing = TRUE)
+```
+
 
 ### Descrição dos dados de produção bibliográfica
+
+```{r}
+unb.gegrafia.pub <- fromJSON("data/Geografia.publication.json")
+names(unb.gegrafia.pub)
+names(unb.gegrafia.pub$PERIODICO$`2012`)
+head(sort(table(unb.gegrafia.pub$PERIODICO$`2017`$periodico), decreasing = TRUE), 10)
+head
+```
 
 
 ### Descrição dos dados de agregação de docentes por área
