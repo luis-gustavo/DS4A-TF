@@ -945,12 +945,19 @@ Para continuação do trabalho, os próximos passos seriam de selecionar uma té
 
 ## CRISP-DM Fase.Atividade 6.1 -  Planejamento da transição 
 
+Criando uma interface de fácil uso para o cliente, como uma aplicação _Web_, de forma que usuários sem experiência e conhecimento técnico das ferramentas de _Data Science_ conseguissem utilizar esta aplicação de forma simples e intuitiva.
 
 ## CRISP-DM Fase.Atividade 6.2 -  Planejamento do monitoramento dos produtos 
 
+Para o monitoramento dos produtos é preciso a automatização da coleta dos dados e da execução dos scripts responsáveis pela análise dos dados e geração dos gráficos para assim não haver a necessidade de interferência humana a menos que haja realmente alguma mudança a ser feita na aplicação.
 
 ## CRISP-DM Fase.Atividade 6.3 -  Planejamento de manutenção
 
+Como já dito acima, o ideal seria a automatização da aplicação, para ser funcional independente da execução de pessoas, como também a automatização da coleta dos dados, pois assim não seria necessário que alguém adicionasse manualmente novos arquivos com dados a serem analisados.
+
+Também a generalização da aplicação, de forma que o usuário possa dizer quais dados ele deseja que sejam trabalhados, de que forma e como será a saída destes, se será em um arquivo em formato específico, através de gráficos e etc.
+
+E, a aplicação de modelos para análises mais aprofundadas dos dados, como _Machine Learning_, processamento de texto e outras, possibilitando um entendimento melhor do programa de Pós-Graduação em diversos aspectos.
 
 ## CRISP-DM Fase.Atividade 6.4 -  Produção do relatório final
 A entrega deste realatório reflete essa etapa.
@@ -960,6 +967,11 @@ Não se aplica, pois não haverá apresentação do relatório.
 
 ## CRISP-DM Fase.Atividade 6.6 -  Revisão sobre a execução do projeto
 
+Com o decorrer do trabalho aprendemos que trabalhar com dados não é uma tarefa fácil, que exige várias etapas para poder realmente transformar eles para um formato em que seja possível estudá-los e analisá-los, para só assim gerar gráficos e informações com aplicabilidade em problemas do mundo real.
+
+As possíveis melhorias futuras para esse trabalho estão listadas nas seções 6.1 a 6.3, que visam o aprimoramento de forma que tenha uma utilidade real para pessoas que não se encontram na área de tecnologia ou que não tem conhecimento prévio sobre _Data Science_.
+
+Por fim, quanto a disciplina Ciência dos Dados para Todos contribuiu para conhecer como os dados gerados tem grande relevância quando são aplicadas técnicas para tratar e lidar com eles. Assim, esperamos conseguir aplicar o aprendido na disciplina em trabalhos futuros, tanto acadêmicos como profissionais, aproveitando e explorando realmente tudo o que os dados do que estão sendo trabalhos tem a oferecer.
 
 # Referências
 
