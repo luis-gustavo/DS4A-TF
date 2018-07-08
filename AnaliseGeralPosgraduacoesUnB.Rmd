@@ -335,6 +335,13 @@ file.info(json.geografia.perfil)
 
 O arquivo `r json.geografia.perfil` apresenta dados sobre o perfil de todos os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
 
+```{r}
+json.geologia.perfil <- 'data/geologia.profile.json'
+file.info(json.geologia.perfil)
+```
+
+O arquivo `r json.geologia.perfil` apresenta dados sobre o perfil de todos os docentes vinculados a programas de pós-graduação de Geologia da UnB, entre 2010 e 2017.
+
 ### Orientações de mestrado e doutorado realizadas pelos docentes vinculados às pós-graduações
 
 ```{r}
@@ -343,6 +350,13 @@ file.info(json.geografia.advise)
 ```
 
 O arquivo `r json.geografia.advise` apresenta dados sobre o orientações de mestrado e doutorado feitas por todos os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
+
+```{r}
+json.geologia.advise <- "data/geologia.advise.json"
+file.info(json.geologia.advise)
+```
+
+O arquivo `r json.geologia.advise` apresenta dados sobre o orientações de mestrado e doutorado feitas por todos os docentes vinculados a programas de pós-graduação de Geologia da UnB, entre 2010 e 2017.
 
 ### Produção bibliográfica gerada pelos docentes vinculados às pós-graduações
 
@@ -353,6 +367,14 @@ file.info(json.geografia.producao.bibliografica)
 
 O arquivo `r json.geografia.producao.bibliografica` apresenta dados sobre a produção bibliográfica gerada por todos os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017. 
 
+
+```{r}
+json.geologia.producao.bibliografica <- "data/geologia.publication.json"
+file.info(json.geologia.producao.bibliografica) 
+```
+
+O arquivo `r json.geologia.producao.bibliografica` apresenta dados sobre a produção bibliográfica gerada por todos os docentes vinculados a programas de pós-graduação de Geologia da UnB, entre 2010 e 2017. 
+
 ### Agrupamento dos docentes conforme áreas de atuação
 
 ```{r}
@@ -362,12 +384,26 @@ file.info(json.geografia.researchers_by_area)
 
 O arquivo `r json.geografia.researchers_by_area` apresenta as vinculações de todos os docentes de Geografia que declararam atuar em cada uma das áreas de pós-graduação do Sistema Nacional de Pós-Graduação da CAPES, conforme apresenta-se registrada essa informação no currículo Lattes de cada um, em data recente
 
+```{r}
+json.geologia.researchers_by_area <- "data/geologia.researchers_by_area.json" 
+file.info(json.geologia.researchers_by_area)
+```
+
+O arquivo `r json.geologia.researchers_by_area` apresenta as vinculações de todos os docentes de Geologia que declararam atuar em cada uma das áreas de pós-graduação do Sistema Nacional de Pós-Graduação da CAPES, conforme apresenta-se registrada essa informação no currículo Lattes de cada um, em data recente
+
 ### Redes de colaboração entre docentes
+
 ```{r}
 file.info('data/Geografia.graph.json')
 ```
 
 O arquivo `rdata/Geografia.graph.json` apresenta redes de colaboração na co-autoria de artigos cientpificos, feitas entre os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
+
+```{r}
+file.info('data/geologia.graph.json')
+```
+
+O arquivo `rdata/geologia.graph.json` apresenta redes de colaboração na co-autoria de artigos cientpificos, feitas entre os docentes vinculados a programas de pós-graduação de Geologia da UnB, entre 2010 e 2017.
 
 ## CRISP-DM Fase.Atividade 2.2 - Descrição dos Dados
 
@@ -649,6 +685,15 @@ Assim, nas próximas seções será demonstrado com mais detalhes o trabalho fei
 
 ## CRISP-DM Fase.Atividade 3.1 - Seleção dos dados
 
+Para a preparação dos dados foram selecionados dados para alguns _data frames_. A seguir está os respectivos _data frames_ e seus dados: 
+
+* Perfil: ID Lattes, resumo do CV, nome, endereço profissional, instituição, orgão, unidade, DDD, telefone, bairro, CEP, cidade, senioridade.
+* Produção: ID Lattes, produção bibliográfica, tipo de produção.
+* Orientação: ID Lattes, orientações acadêmicas, orientação.
+* Áreas de atuação: ID Lattes, áreas de atuação.
+
+Como pode ser visto, é a partir do ID Lattes que os docentes serão identificados através dos _data frames_, assim todos estes contém esse campo. Quanto aos outros dados, no caso do _data frame_ Perfil, são os dados mínimo para identificação e perfil de cada professor. Para os _data frames_ Produção, Orientação e Áreas de Atuação, são os dados mais relevantes para de cada tipo, para entender como está o funcionamento e desenvolvimento dos programas de Pós-Graduação aqui analisados.
+
 ## CRISP-DM Fase.Atividade 3.2 - Limpeza dos dados
 
 A limpeza dos dados já está contida em conjunto com a construção dos mesmos na seção abaixo.
@@ -838,8 +883,10 @@ extrai_areas_atuacao <- function(jsonProfessores){
 }
 ```
 
+## CRISP-DM Fase.Atividade 3.4 - Integração dos dados
 
 Em seguida é feito a criação do arquivo para análise, ainda tendo como base o modelo.
+
 ```{r}
 unb.geografia.prof.json <- read_file("data/Geografia.profile.json")
 unb.prof.df.capes <- read.csv("data/PesqPosCapes.csv", 
@@ -889,17 +936,17 @@ unb.geografia.prof.df <- unb.geografia.prof.df.professores %>%
       summarise(n_distinct(AreaPos)), 
     by = "idLattes")
 ```
-Em seguida, pode-ser observar a construção dos dados trabalhados, por meio das funções _head_ e _glimpse_:
+
+Por fim, pode-ser observar a construção dos dados trabalhados, por meio das funções _head_ e _glimpse_:
 
 ```{r}
 glimpse(unb.geografia.prof.df)
 head(unb.geografia.prof.df, 1)
 ```
 
-## CRISP-DM Fase.Atividade 3.4 - Integração dos dados
+### Análise dos dados
 
-## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
-
+#### Nĩvel de internacionalização
 Para análise do nível de internacionalização das publicações referentes ao programa de pós graduação de geografia da UnB, foi gerado o seguinte gráfico, utilizando a biblioteca ggplot2.
 ```{r}
 eventos2017 <- unb.geografia.pub$EVENTO$`2017`
@@ -910,6 +957,9 @@ data <- data.frame(paises, natureza)
 ggplot(data, aes(x=paises, y="", col=paises)) + geom_point() + geom_jitter()
 ```
 
+## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
+
+Quanto a formatação dos dados, não houve necessidade de ser feita pelos integrantes do grupo, pois ao longo da seleção até a integração dos dados foi visado a formatação, de forma que não houvesse necessidade de integração posterior.
 
 # CRISP-DM Fase 4 - __Modelagem__
 
@@ -931,10 +981,14 @@ Não se aplica.
 
 ## CRISP-DM Fase.Atividade 5.1 - Avaliação dos resultados
 
+Após o tratamento dos dados, as análises demonstraram que houve um crescimento ao longo dos anos da atividade da Pós-Graduação nas áreas de Geografia, Geociências Aplicadas e Geodinâmica, e, Geologia. Isso era esperado considerando que ao decorrer da existência do programa mais pessoas estaram interessadas e haverá uma melhoria na qualidade dos cursos oferecidos.
+
 ## CRISP-DM Fase.Atividade 5.2 - Revisão do processo
 Não se aplica.
 
 ## CRISP-DM Fase.Atividade 5.3 -  Determinação dos etapas seguintes
+
+Para continuação do trabalho, os próximos passos seriam de selecionar uma técnica de modelagem para aplicar aos dados, realizando testes até a obtenção do modelo definitivo, cujo conteria a análise desejada. Ou seja, a seção 4 antes prevista no trabalho. Quanto ao modelo aplicado e como trabalhar nele ainda não foi definido e/ou pensado, portanto é deixado aqui em aberto para uma avaliação futura.
 
 # CRISP-DM Fase 6 - __Implantação__ (_deployment_)
 
