@@ -450,20 +450,20 @@ sort(table(unb.geografia.adv$ORIENTACAO_CONCLUIDA_MESTRADO$`2017`$curso), decrea
 
 Fazendo a leitura do arquivos Geografia.publication.json, e para entender sobre o conteúdo dos dados presentes dentro dele, utiliza-se a função _names_ e, a partir dela , observa-se que as publicações bibliográficas estão divididas em sete áreas principais. Representadas abaixo:
 ```{r}
-unb.gegrafia.pub <- fromJSON("data/Geografia.publication.json")
-names(unb.gegrafia.pub)
+unb.geografia.pub <- fromJSON("data/Geografia.publication.json")
+names(unb.geografia.pub)
 ```
 
 Afim de entender mais sobre os dados presentes em alguns das áreas principais, foi explorados os dados de periodicos e livros no ano de 2017. Pode-se observar abaixo a quantidade de registros, os atributos que contém em cada área, os periodicos e o país de publicação dos livros. 
 
 ```{r}
-length(unb.gegrafia.pub$PERIODICO$`2017`)
-names(unb.gegrafia.pub$PERIODICO$`2017`)
-sort(table(unb.gegrafia.pub$PERIODICO$`2017`$periodico), decreasing = TRUE)
+length(unb.geografia.pub$PERIODICO$`2017`)
+names(unb.geografia.pub$PERIODICO$`2017`)
+sort(table(unb.geografia.pub$PERIODICO$`2017`$periodico), decreasing = TRUE)
 
-length(unb.gegrafia.pub$LIVRO$`2017`)
-names(unb.gegrafia.pub$LIVRO$`2017`)
-sort(table(unb.gegrafia.pub$LIVRO$`2017`$pais_de_publicacao), decreasing = TRUE)
+length(unb.geografia.pub$LIVRO$`2017`)
+names(unb.geografia.pub$LIVRO$`2017`)
+sort(table(unb.geografia.pub$LIVRO$`2017`$pais_de_publicacao), decreasing = TRUE)
 ```
 
 
@@ -490,6 +490,25 @@ unb.geografia.area.df[]
 ### Arquivo Profile
 
 ### Arquivo Publicação
+
+Agora criamos um data frame com a junção dos dados das publicações ao longo dos anos. Podemos observar que o _data frame_ final contém 10 variáveis e um total de 388 observações, o que indica que temos 10 campos possíveis para cada publicação, desde natureza e título até número de páginas e autores, e que temos um total de 388 publicações ao longo dos anos presentes no _dataset_.
+
+```{r}
+unb.geografia.pub.df <- data.frame()
+for (i in 1:length(unb.geografia.pub[[1]]))
+    unb.geografia.pub.df <- rbind(unb.geografia.pub.df, unb.geografia.pub$PERIODICO[[i]])
+glimpse(unb.geografia.pub.df)
+```
+
+Por fim, limpamos o _data frame_ de quaisquer listas que possa a ter, para assim facilitar a análise a ser feita posteriormente.
+
+```{r}
+unb.geografia.pub.df$autores <- gsub("\",\"|\", \"", "; ", unb.geografia.pub.df$autores)
+unb.geografia.pub.df$autores <- gsub("\"|c\\(|\\)", "", unb.geografia.pub.df$autores)
+unb.geografia.pub.df$`autores-endogeno` <- gsub(",", ";", unb.geografia.pub.df$`autores-endogeno`)
+unb.geografia.pub.df$`autores-endogeno` <- gsub("\"|c\\(|\\)", "", unb.geografia.pub.df$`autores-endogeno`)
+glimpse(unb.geografia.pub.df)
+```
 
 ### Arquivo Orientação
 
