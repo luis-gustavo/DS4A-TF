@@ -31,17 +31,17 @@ Por fim, ao longo desse trabalho será demonstrado como é realizado um trabalh
 
 Foi utilizada a linguagem R e plataforma RStudio para a manipulação e análise dos dados, e este documento foi gerado no formato R Markdown. Foram utilizadas as seguintes bibliotecas no RStudio:
 
-```{r library-load}
-library(jsonlite)
-library(listviewer)
-library(readxl)
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-library(readr)
-library(purrr)
-library(tibble)
-library(ggpubr)
+```{r message=FALSE}
+library("jsonlite")
+library("listviewer")
+library("readxl")
+library("ggplot2")
+library("dplyr")
+library("tidyr")
+library("readr")
+library("purrr")
+library("tibble")
+library("ggpubr")
 ```
 
 ## CRISP-DM
@@ -335,6 +335,13 @@ file.info(json.geografia.perfil)
 ```
 
 O arquivo `r json.geografia.perfil` apresenta dados sobre o perfil de todos os docentes vinculados a programas de pós-graduação de Geografia da UnB, entre 2010 e 2017.
+
+```{r}
+json.geociencias.perfil <- 'data/geociencias.profile.json'
+file.info(json.geociencias.perfil)
+```
+
+O arquivo `r json.geociencias.perfil` apresenta dados sobre o perfil de todos os docentes vinculados a programas de pós-graduação de Geociências da UnB, entre 2010 e 2017.
 
 ```{r}
 json.geologia.perfil <- 'data/geologia.profile.json'
