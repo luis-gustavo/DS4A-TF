@@ -5,10 +5,10 @@ title: Ciência de Dados para Todos (Data Science For All) - 2018.1 - Análise
   Geociências Aplicadas e Geodinâmica
 date: "02/07/2018"
 output:
+  pdf_document: default
+  word_document: default
   html_document:
     df_print: paged
-  word_document: default
-  pdf_document: default
 authors: Diogo Luís Teixeira de Macedo Sampaio, Luis Gustavo Avelino de Lima Jacinto,Ricardo Souza Rachaus
 ---
 
@@ -329,11 +329,21 @@ Todos os arquivos com dados iniciais a seguir apresentados foram fornecidos pelo
 
 
 ### Perfil profissional dos docentes vinculados às pós-graduações
+
 ```{r}
 json.geografia.perfil <- 'data/Geografia.profile.json'
 file.info(json.geografia.perfil)
 ```
 
+```{r}
+json.geociencias.perfil <- 'data/geociencias.profile.json'
+file.info(json.geociencias.perfil)
+```
+
+```{r}
+json.geologia.perfil <- 'data/geologia.profile.json'
+file.info(json.geologia.perfil)
+```
 Os arquivos `r json.geografia.perfil`, `r json.geociencias.perfil` e `r json.geologia.perfil` apresentam dados sobre o perfil de todos os docentes vinculados a programas de pós-graduação de Geografia, Geociências e Geologia da UnB, entre 2010 e 2017.
 
 
@@ -399,20 +409,25 @@ Os arquivos `r json.geografia.researchers_by_area`, `r json.geociencias.research
 ### Redes de colaboração entre docentes
 
 ```{r}
-file.info('data/Geografia.graph.json')
+json.geografia.redes <- "data/Geografia.graph.json" 
+file.info(json.geografia.redes)
 ```
 
 ```{r}
-file.info('data/geociencias.graph.json')
+json.geociencias.redes <- "data/geociencias.graph.json" 
+file.info(json.geociencias.redes)
 ```
 
 ```{r}
-file.info('data/geologia.graph.json')
+json.geologia.redes <- "data/geologia.graph.json" 
+file.info(json.geologia.redes)
 ```
 
-Os arquivos `r data/Geografia.graph.json`, `r data/geociencias.graph.json` e `r data/geologia.graph.json` apresentam redes de colaboração na co-autoria de artigos científicos, feitas entre os docentes vinculados a programas de pós-graduação de Geografia, Geociências e Geologia da UnB, entre 2010 e 2017.
+Os arquivos `r json.geografia.redes`, `r json.geociencias.redes` e `r json.geologia.redes` apresentam redes de colaboração na co-autoria de artigos científicos, feitas entre os docentes vinculados a programas de pós-graduação de Geografia, Geociências e Geologia da UnB, entre 2010 e 2017.
+
 
 ## CRISP-DM Fase.Atividade 2.2 - Descrição dos Dados
+
 
 ### Descrição dos dados do perfil
 
@@ -471,7 +486,6 @@ Observando os atributos do pesquisador em análise, pode-se perceber que:
 * Possui um capítulo de livro publicado no ano de 2011.
 * Possui cinco orientação de doutorado em andamento, uma destas iniciada em 2014.
 * Possui senioridade 8.
-
 
 #### Potencial de utilização dos dados do perfil dos docentes
 
@@ -1215,4 +1229,3 @@ Por fim, quanto a disciplina Ciência dos Dados para Todos contribuiu para conhe
 * POSGEA. Apresentação, 2018. Disponíıvel em <http://www.posgea.unb.br/site/apresentacao>.
 
 * IGD. Geociências Aplicadas - Instituto de Geociências - Universidade de Brasília, 2018. Disponíıvel em <http://www.igd.unb.br/index.php?option=com_content&view=article&id=23&Itemid=136>.
-
