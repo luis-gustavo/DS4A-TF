@@ -1073,6 +1073,76 @@ ggplot(data, aes(x="", y=names, fill=names))+
 
 É evidente que no programa de pós-graduação de geografia da UnB há mais publicações de Periódicos, Texto em Jornais, Livros e em Eventos. Além disso, percebe-se que artigos aceitos é de longe a menor representação, em termos quantitativos, das publicações desse programa.
 
+#### Orientações
+Foi analisado o arquivo Geologia.advise.json,que possui as orientações vinculadas aos perfis dos professores da Geologia, separadas em listas pelo tipo de orientação, sendo que cada tipo possui listas classificadas por ano.
+
+```{r echo=FALSE}
+unb.geologia.adv.tb <- tibble()
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_EM_ANDAMENTO_DE_POS_DOUTORADO[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_EM_ANDAMENTO_DOUTORADO[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_EM_ANDAMENTO_MESTRADO[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_EM_ANDAMENTO_GRADUACAO[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_EM_ANDAMENTO_INICIACAO_CIENTIFICA[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_CONCLUIDA_POS_DOUTORADO[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_CONCLUIDA_DOUTORADO[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$ORIENTACAO_CONCLUIDA_MESTRADO[[i]])
+for (i in 1:length(unb.geologia.adv[[1]]))
+  unb.geologia.adv.tb <- rbind(unb.geologia.adv.tb,
+                   unb.geologia.adv$OUTRAS_ORIENTACOES_CONCLUIDAS[[i]])
+```
+
+Foi gerado o gráfico que relaciona o número de orientações por ano, relacionado à natureza destas:
+
+```{r fig.width=10, orient.tb}
+ggplot(unb.geologia.adv.tb, aes(x = ano, fill = natureza)) +
+  geom_bar(stat="count") +
+  labs(x = "Ano", y = "Orientações", title = "Orientação X Ano")
+```
+
+Pode-se observar que o número de orientações por ano manteve uma média maior que 100, desde o ano de 2012.
+
+O gráfico a seguir mostra a relação entre as agências financiadoras de pesquisas ao longo dos anos:
+
+```{r fig.width=10, echo=FALSE}
+ggplot(unb.geologia.adv.tb, aes(x = agencia_financiadora, y = ano)) +
+  geom_count() +
+  labs(x = "", y = "", title = "") +
+    coord_flip()
+```
+
+Observa-se forte influência da CAPES e do CNPq nas áreas de pesquisa, sendo estes grandes financiadores.
+
+Para observar o nível de internacionalização das orientações, foi gerado o gráfico abaixo, o qual demonstra arazão entre as instituições de origem das orientações:
+
+```{r fig.width=10, echo=FALSE}
+ggplot(unb.geologia.adv.tb, aes(x = 1, fill = instituicao)) +
+  geom_bar() +
+  labs(x = "", y = "", fill = "Instituição", title = "Orientações X Instituições") +
+  coord_polar(theta = "y")
+```
+
+A lista de diferentes instituições pode ser observada com o seguinte código abaixo. Por meio dela e do gráficomostrado anteriormente, pode-se ter uma estimativa do número de orientações com influência internacional.
+
+```{r }
+distinct(unb.geologia.adv.tb, instituicao)
+```
+
 ## CRISP-DM Fase.Atividade 3.5 -  Formatação dos dados
 
 Quanto a formatação dos dados, não houve necessidade de ser feita pelos integrantes do grupo, pois ao longo da seleção até a integração dos dados foi visado a formatação, de forma que não houvesse necessidade de integração posterior.
